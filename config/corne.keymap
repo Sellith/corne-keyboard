@@ -135,6 +135,26 @@
             hold-trigger-key-positions = <39 40 41>;
             tapping-term-ms = <200>;
         };
+
+        yellowlayer: yellowlayer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "YELLOWLAYER";
+            bindings = <&moyellow>, <&tog_yellow>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <39 40 41>;
+            tapping-term-ms = <200>;
+        };
+
+        purplelayer: purplelayer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "PURPLELAYER";
+            bindings = <&mopurple>, <&tog_purple>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <37 38 36>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
@@ -247,7 +267,7 @@
             label = "MOPURPLE";
         };
 
-        yellow: yellow {
+        moyellow: yellow {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -278,10 +298,10 @@
 
         base {
             bindings = <
-&kp ESC   &kp W             &kp L                &kp R                 &kp B   &kp Z        &kp SQT              &kp Q               &kp U             &kp D  &kp J  &lrpar
-&kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T   &kp SEMI     &kp G                &kp A               &kp E             &kp O  &kp I  &lrbkt
-&exction  &kp F             &kp M                &kp V                 &kp C   &kp MINUS    &slbsl               &kp P               &kp X             &kp K  &kp Y  &lrbrc
-                                                 &htkp LSHFT CAPSLOCK  &trans  &trans       &greenlayer 3 ENTER  &cyanlayer 5 SPACE  &orangelayer 1 0
+&kp ESC   &kp W             &kp L                &kp R                 &kp B             &kp Z               &kp SQT              &kp Q               &kp U             &kp D  &kp J  &lrpar
+&kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T             &kp SEMI            &kp G                &kp A               &kp E             &kp O  &kp I  &lrbkt
+&exction  &kp F             &kp M                &kp V                 &kp C             &kp MINUS           &slbsl               &kp P               &kp X             &kp K  &kp Y  &lrbrc
+                                                 &htkp LSHFT CAPSLOCK  &purplelayer 6 6  &yellowlayer 4 4    &greenlayer 3 ENTER  &cyanlayer 5 SPACE  &orangelayer 1 0
             >;
         };
 
