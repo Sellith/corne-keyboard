@@ -284,6 +284,104 @@
 
             label = "YELLOW";
         };
+
+        ae: ae {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N3 &kp N0>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "AE";
+        };
+
+        AE: AE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N9 &kp N8>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "AE";
+        };
+
+        c_cedille: c_cedille {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N3 &kp N0>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "C_CEDILLE";
+        };
+
+        C_cedille: C_cedille {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N9 &kp N9>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "C_CEDILLE";
+        };
+
+        o_barre: o_barre {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N4 &kp N8>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "O_BARRE";
+        };
+
+        O_barre: O_barre {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N1 &kp N6>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "O_BARRE";
+        };
+
+        ss: ss {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N2 &kp N3>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "SS";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
