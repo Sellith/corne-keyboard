@@ -105,14 +105,65 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        greenlayer: greenlayer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GREENLAYER";
+            bindings = <&mogreen>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <39 40 41>;
+            tapping-term-ms = <200>;
+        };
+
+        orangelayer: orangelayer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ORANGELAYER";
+            bindings = <&moorange>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <39 40 41>;
+            tapping-term-ms = <200>;
+        };
+
+        cyanlayer: cyanlayer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CYANLAYER";
+            bindings = <&mocyan>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <39 40 41>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
-        morgb: morgb {
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
+        mogreen: morgb {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
             bindings =
-                <&macro_param_2to2 &rgb_ug RGB_COLOR_HSB_CMD MACRO_PLACEHOLDER &macro_param_1to1 &mo MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(123,100,49) &macro_param_1to1>,
+                <&macro_press>,
+                <&mo MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(301,100,48)>,
+                <&macro_press>;
+
+            label = "MORGB";
+        };
+
+        moorange: moorange {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&rgb_ug RGB_COLOR_HSB(24,100,49) &macro_param_1to1>,
+                <&macro_press>,
+                <&mo MACRO_PLACEHOLDER>,
                 <&macro_press>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
@@ -120,7 +171,25 @@
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(301,100,48)>;
 
-            label = "MORGB";
+            label = "MOORANGE";
+        };
+
+        mocyan: mocyan {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&rgb_ug RGB_COLOR_HSB(180,100,49) &macro_param_1to1>,
+                <&macro_press>,
+                <&mo MACRO_PLACEHOLDER>,
+                <&macro_press>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(301,100,48)>;
+
+            label = "MOCYAN";
         };
     };
 
@@ -136,10 +205,10 @@
 
         base {
             bindings = <
-&kp ESC   &kp W             &kp L                &kp R                 &kp B   &kp Z        &kp SQT                                &kp Q   &kp U   &kp D  &kp J  &lrpar
-&kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T   &kp SEMI     &kp G                                  &kp A   &kp E   &kp O  &kp I  &lrbkt
-&exction  &kp F             &kp M                &kp V                 &kp C   &kp MINUS    &slbsl                                 &kp P   &kp X   &kp K  &kp Y  &lrbrc
-                                                 &htkp LSHFT CAPSLOCK  &trans  &trans       &morgb RGB_COLOR_HSB_VAL(36,100,50) 3  &trans  &trans
+&kp ESC   &kp W             &kp L                &kp R                 &kp B   &kp Z        &kp SQT                                  &kp Q   &kp U   &kp D  &kp J  &lrpar
+&kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T   &kp SEMI     &kp G                                    &kp A   &kp E   &kp O  &kp I  &lrbkt
+&exction  &kp F             &kp M                &kp V                 &kp C   &kp MINUS    &slbsl                                   &kp P   &kp X   &kp K  &kp Y  &lrbrc
+                                                 &htkp LSHFT CAPSLOCK  &trans  &trans       &mogreen RGB_COLOR_HSB_VAL(36,100,50) 3  &trans  &trans
             >;
         };
 
