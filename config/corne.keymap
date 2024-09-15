@@ -95,9 +95,25 @@
             hold-trigger-key-positions = <15 14 13>;
             tapping-term-ms = <200>;
         };
+
+        htkp: htkp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HTKP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-trigger-key-positions = <36 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41>;
+        };
     };
 
     macros {
+        morgb: morgb {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "MORGB";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -112,10 +128,10 @@
 
         base {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&kp ESC   &kp W             &kp L                &kp R                 &kp B   &kp Z        &kp SQT  &kp Q   &kp U   &kp D  &kp J  &lrpar
+&kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T   &kp SEMI     &kp G    &kp A   &kp E   &kp O  &kp I  &lrbkt
+&exction  &kp F             &kp M                &kp V                 &kp C   &kp MINUS    &slbsl   &kp P   &kp X   &kp K  &kp Y  &lrbrc
+                                                 &htkp LSHFT CAPSLOCK  &trans  &trans       &trans   &trans  &trans
             >;
         };
 
