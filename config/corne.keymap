@@ -142,9 +142,8 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&rgb_ug RGB_COLOR_HSB(123,100,49)>,
                 <&macro_tap>,
-                <&macro_param_1to1>,
+                <&rgb_ug RGB_COLOR_HSB(123,100,49) &macro_param_1to1>,
                 <&macro_press>,
                 <&mo MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
@@ -191,6 +190,79 @@
                 <&rgb_ug RGB_COLOR_HSB(301,100,48)>;
 
             label = "MOCYAN";
+        };
+
+        release_tog: release_tog {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_param_1to1>,
+                <&macro_tap>,
+                <&tog MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(301,100,48)>;
+
+            label = "RELEASE_TOG";
+        };
+
+        tog_purple: tog_purple {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(267,100,49) &macro_param_1to1>,
+                <&macro_tap>,
+                <&tog MACRO_PLACEHOLDER>;
+
+            label = "TOG_PURPLE";
+        };
+
+        tog_yellow: tog_yellow {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(56,100,49) &macro_param_1to1>,
+                <&macro_tap>,
+                <&tog MACRO_PLACEHOLDER>;
+
+            label = "TOG_YELLOW";
+        };
+
+        mopurple: mopurple {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(267,100,49) &macro_param_1to1>,
+                <&macro_press>,
+                <&mo MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1>,
+                <&macro_release>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(304,100,50)>;
+
+            label = "MOPURPLE";
+        };
+
+        yellow: yellow {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(63,100,49) &macro_param_1to1>,
+                <&macro_press>,
+                <&mo MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1>,
+                <&macro_release>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(304,100,50)>;
+
+            label = "YELLOW";
         };
     };
 
