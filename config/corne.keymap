@@ -136,10 +136,10 @@
 
         base {
             bindings = <
-&kp ESC   &kp W             &kp L                &kp R                 &kp B   &kp Z        &kp SQT  &kp Q   &kp U   &kp D  &kp J  &lrpar
-&kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T   &kp SEMI     &kp G    &kp A   &kp E   &kp O  &kp I  &lrbkt
-&exction  &kp F             &kp M                &kp V                 &kp C   &kp MINUS    &slbsl   &kp P   &kp X   &kp K  &kp Y  &lrbrc
-                                                 &htkp LSHFT CAPSLOCK  &trans  &trans       &trans   &trans  &trans
+&kp ESC   &kp W             &kp L                &kp R                 &kp B   &kp Z        &kp SQT                                &kp Q   &kp U   &kp D  &kp J  &lrpar
+&kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T   &kp SEMI     &kp G                                  &kp A   &kp E   &kp O  &kp I  &lrbkt
+&exction  &kp F             &kp M                &kp V                 &kp C   &kp MINUS    &slbsl                                 &kp P   &kp X   &kp K  &kp Y  &lrbrc
+                                                 &htkp LSHFT CAPSLOCK  &trans  &trans       &morgb RGB_COLOR_HSB_VAL(36,100,50) 3  &trans  &trans
             >;
         };
 
@@ -152,7 +152,7 @@
             >;
         };
 
-        lingi_2 {
+        Lingi_2 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -161,7 +161,7 @@
             >;
         };
 
-        layer_3 {
+        Symbols {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -170,7 +170,7 @@
             >;
         };
 
-        layer_4 {
+        Numeric {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -179,7 +179,7 @@
             >;
         };
 
-        layer_5 {
+        Edition {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -188,7 +188,7 @@
             >;
         };
 
-        layer_6 {
+        Navigation {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
