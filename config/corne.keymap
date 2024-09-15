@@ -119,7 +119,7 @@
         orangelayer: orangelayer {
             compatible = "zmk,behavior-hold-tap";
             label = "ORANGELAYER";
-            bindings = <&moorange>, <&kp>;
+            bindings = <&moorange>, <&doco>;
 
             #binding-cells = <2>;
             hold-trigger-key-positions = <39 40 41>;
@@ -147,11 +147,11 @@
                 <&macro_press>,
                 <&mo MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
+                <&macro_param_1to1>,
                 <&macro_release>,
-                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
+                <&mo MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(301,100,48)>,
-                <&macro_press>;
+                <&rgb_ug RGB_COLOR_HSB(301,100,48)>;
 
             label = "MORGB";
         };
@@ -205,10 +205,10 @@
 
         base {
             bindings = <
-&kp ESC   &kp W             &kp L                &kp R                 &kp B   &kp Z        &kp SQT                                  &kp Q   &kp U   &kp D  &kp J  &lrpar
-&kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T   &kp SEMI     &kp G                                    &kp A   &kp E   &kp O  &kp I  &lrbkt
-&exction  &kp F             &kp M                &kp V                 &kp C   &kp MINUS    &slbsl                                   &kp P   &kp X   &kp K  &kp Y  &lrbrc
-                                                 &htkp LSHFT CAPSLOCK  &trans  &trans       &mogreen RGB_COLOR_HSB_VAL(36,100,50) 3  &trans  &trans
+&kp ESC   &kp W             &kp L                &kp R                 &kp B   &kp Z        &kp SQT              &kp Q               &kp U             &kp D  &kp J  &lrpar
+&kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T   &kp SEMI     &kp G                &kp A               &kp E             &kp O  &kp I  &lrbkt
+&exction  &kp F             &kp M                &kp V                 &kp C   &kp MINUS    &slbsl               &kp P               &kp X             &kp K  &kp Y  &lrbrc
+                                                 &htkp LSHFT CAPSLOCK  &trans  &trans       &greenlayer 3 ENTER  &cyanlayer 5 SPACE  &orangelayer 1 0
             >;
         };
 
