@@ -1,7 +1,5 @@
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
 
 #define BASE 0
 #define GAMING 1
@@ -21,697 +19,230 @@
 
 #define MO_TOG(layer) &mo_tog layer layer
 
+&sk { quick-release; };
+
 / {
-	behaviors {
-		exction: exclamation_question {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp EXCL>, <&kp QMARK>;
-			mods = <(MOD_LSHFT)>;
-		};
-		lrpar: left_right_parenthesis {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp LPAR>, <&kp RPAR>;
-			mods = <(MOD_LSHFT)>;
-		};
-		lrpesc: left_right_parenthesis_escape {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp lrpar>, <&kp ESC>;
-			mods = <(MOD_LCTRL)>;
-		};
-		lrbkt: left_right_bracket {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp LBKT>, <&kp RBKT>;
-			mods = <(MOD_LSHFT)>;
-		};
-		lrbrc: left_right_brace {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp LBRC>, <&kp RBRC>;
-			mods = <(MOD_LSHFT)>;
-		};
-		doco: dot_comma {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp COMMA>, <&kp DOT>;
-			mods = <(MOD_LSHFT)>;
-		};
-		geg: greaterequal_greater {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U2265>, <&kp GT>;
-			mods = <(MOD_LSHFT)>;
-		};
-		slbsl: slash_backslash {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp FSLH>, <&kp BSLH>;
-			mods = <(MOD_LSHFT)>;
-		};
-		lel: lessequal_less {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U2264>, <&kp LT>;
-			mods = <(MOD_LSHFT)>;
-		};
-		eine: equal_inequal {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U2260>, <&kp EQUAL>;
-			mods = <(MOD_LSHFT)>;
-		};
-		tabalt: tab_alt {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			flavor = "hold-prefered";
-			tapping-term-ms = <200>;
-			bindings = <&sk LALT>, <&kp TAB>;
-		};
-		guimin: gui_minus {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			flavor = "hold-prefered";
-			tapping-term-ms = <200>;
-			bindings = <&kp LGUI>, <&kp MINUS>;
-		};
-		undrctrl: underscore_control {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			flavor = "hold-prefered";
-			tapping-term-ms = <200>;
-			bindings = <&kp LCTRL>, <&kp UNDER>;
-		};
-		shiloc: shift_shiftlock {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			flavor = "hold-prefered";
-			tapping-term-ms = <200>;
-			bindings = <&kp LSHFT>, <&kp CAPS>;
-		};
-		lindoco: lingi_doco {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			flavor = "hold-prefered";
-			tapping-term-ms = <200>;
-			bindings = <&mo LINGI>, <&kp doco>;
-		};
-		edispc: edition_space {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			flavor = "hold-prefered";
-			tapping-term-ms = <200>;
-			bindings = <&mo EDITION>, <&kp space>;
-		}:	
-		symter: symbols_enter {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			flavor = "hold-prefered";
-			tapping-term-ms = <200>;
-			bindings = <&mo SYMBOLS>, <&kp ENTER>;
-		};
-		mo_tog: behavior_mo_tog {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			flavor = "hold-prefered";
-			tapping-term-ms = <200>;
-			bindings = <&mo>, <&tog>;	
-		};
-		ae: ae_AE {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00E6>, <&kp U00C6>;
-			mods = <(MOD_LSHFT)>;
-		};
-		os: slashed_o {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00F8>, <&kp U00D8>;
-			mods = <(MOD_LSHFT)>;
-		};
-		oe: oe_ligature {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U0152>, <&kp U0153>;
-			mods = <(MOD_LSHFT)>;
-		};
-		ar: ringed_a {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00E5>, <&kp U00E5>;
-			mods = <(MOD_LSHFT)>;
-		};
-		aa: acute_a {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00E1>, <&kp U00C1>;
-			mods = <(MOD_LSHFT)>;
-		};
-		ea: acute_e {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00E9>, <&kp U00C9>;
-			mods = <(MOD_LSHFT)>;
-		};
-		ia: acute_i {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00ED>, <&kp U00CD>;
-			mods = <(MOD_LSHFT)>;
-		};
-		oa: acute_o {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00F3>, <&kp U00D3>;
-			mods = <(MOD_LSHFT)>;
-		};
-		ua: acute_u {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00FA>, <&kp U00DA>;
-			mods = <(MOD_LSHFT)>;
-		};
-		ag: grave_a {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00E0>, <&kp U00C0>;
-			mods = <(MOD_LSHFT)>;
-		};
-		eg: grave_e {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00ED>, <&kp U00CD>;
-			mods = <(MOD_LSHFT)>;
-		};
-		ig: grave_i {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00EC>, <&kp U00CC>;
-			mods = <(MOD_LSHFT)>;
-		};
-		og: grave_o {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00F2>, <&kp U00D2>;
-			mods = <(MOD_LSHFT)>;
-		};
-		ug: grave_u {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00F9>, <&kp U00D9>;
-			mods = <(MOD_LSHFT)>;
-		};
-		ac: caret_a {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00E2>, <&kp U00C2>;
-			mods = <(MOD_LSHFT)>;
-		};
-		ec: caret_e {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00EA>, <&kp U00CA>;
-			mods = <(MOD_LSHFT)>;
-		};
-		ic: caret_i {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00EE>, <&kp U00CE>;
-			mods = <(MOD_LSHFT)>;
-		};
-		oc: caret_o {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00F4>, <&kp U00D4>;
-			mods = <(MOD_LSHFT)>;
-		};
-		uc: caret_u {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00FB>, <&kp U00DB>;
-			mods = <(MOD_LSHFT)>;
-		};
-		ad: diaeresis_a {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00E4>, <&kp U00C4>;
-			mods = <(MOD_LSHFT)>;
-		};
-		ed: diaeresis_e {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00EB>, <&kp U00CB>;
-			mods = <(MOD_LSHFT)>;
-		};
-		id: diaeresis_i {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00EF>, <&kp U00CF>;
-			mods = <(MOD_LSHFT)>;
-		};
-		od: diaeresis_o {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00F6>, <&kp U00D6>;
-			mods = <(MOD_LSHFT)>;
-		};
-		ud: diaeresis_u {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00FC>, <&kp U00DC>;
-			mods = <(MOD_LSHFT)>;
-		};
-		yd: diaeresis_y {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00FF>, <&kp U0178>;
-			mods = <(MOD_LSHFT)>;
-		};
-		cedille: c_cedille {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00E7>, <&kp U00C7>;
-			mods = <(MOD_LSHFT)>;
-		};
-		at: tilde_a {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00E3>, <&kp U00C3>;
-			mods = <(MOD_LSHFT)>;
-		};
-		et: tilde_e {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U1EBD>, <&kp U1EBC>;
-			mods = <(MOD_LSHFT)>;
-		};
-		ot: tilde_o {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00F5>, <&kp U00D5>;
-			mods = <(MOD_LSHFT)>;
-		};
-		nt: tilde_n {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp U00F1>, <&kp U00D1>;
-			mods = <(MOD_LSHFT)>;
-		};
-		ss: eszett {
-			compatible = "zmk,behavior-hold-tap";
-			#binding cells = <0>;
-			bindings = <&kp U00DF>, <&kp U1E9E>
-			mods = <(MOD_LSHFT)>;
-		};
-		dubamps: double_ampersand {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&kp AMPS>, <&kp AMPS>;
-		};
-		dubpipe: double_pipe {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			binddings = <&kp PIPE>, <&kp PIPE>;
-		};
-		zero: zero_zero {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp KP_N0>, <&kp U2070>;
-			mods = <(MOD_LSHFT)>;
-		};
-		one: one_one {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp KP_N1>, <&kp U00B9>;
-			mods = <(MOD_LSHFT)>;
-		};
-		two: two_two {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp KP_N2>, <&kp U00B2>;
-			mods = <(MOD_LSHFT)>;
-		};
-		three: three_three {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp KP_N3>, <&kp U00B3>;
-			mods = <(MOD_LSHFT)>;
-		};
-		four: four_four {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp KP_N>, <&kp U2074>;
-			mods = <(MOD_LSHFT)>;
-		};
-		five: five_five {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp KP_N5>, <&kp U2075>;
-			mods = <(MOD_LSHFT)>;
-		};
-		six: six_six {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp KP_N6>, <&kp U2076>;
-			mods = <(MOD_LSHFT)>;
-		};
-		seven: seven_seven {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp KP_N7>, <&kp U2077>;
-			mods = <(MOD_LSHFT)>;
-		};
-		eight: eight_eight {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp KP_N8>, <&kp U2078>;
-			mods = <(MOD_LSHFT)>;
-		};
-		nine: nine_nine {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp KP_N9>, <&kp U2079>;
-			mods = <(MOD_LSHFT)>;
-		};
-	};
-	macros {
-		permdel: permanant_deletion {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings 
-			= <&macro-press &kp LSHFT>
-			, <&macro-tap &kp DEL>
-			, <&macro-release &kp LSHFT>
-			;
-		};
-		selall: select_all {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&macro-press &kp LCTRL>
-			, <&macro-tap &kp A>;
-			, <&macro-release &kp LCTRL>
-			;
-		};
-		delw: delete_word {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&macro-press &kp LCTRL>
-			, <&macro-tap &kp DEL0>;
-			, <&macro-release &kp LCTRL>
-			;
-		};
-		bspcw: backspace_word {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&macro-press &kp LCTRL>
-			, <&macro-tap &kp BSPC>;
-			, <&macro-release &kp LCTRL>
-			;
-		};
-		dell: del_line {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&macro-tap &kp HOME>
-			, <&macro-press &kp LSHFTL>
-			, <&macro-tap &kp DOWN>;
-			, <&macro-release &kp LSHFT>
-			, <&macro-tap &kp DEL>
-			;
-		};
-		pghome: page_home {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&macro-press &kp LCTRL>
-			, <&macro-tap &kp HOME>;
-			, <&macro-release &kp LCTRL>
-			;
-		};
-		pgend: page_end {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&macro-press &kp LCTRL>
-			, <&macro-tap &kp END>;
-			, <&macro-release &kp LCTRL>
-			;
-		};
-		winleft: window_left {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&macro-press &kp LGUI>
-			, <&macro-tap &kp LEFT>;
-			, <&macro-release &kp LGUI>
-			;
-		};
-		winright: window_right {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&macro-press &kp LGUI>
-			, <&macro-tap &kp RIGHT>;
-			, <&macro-release &kp LGUI>
-			;
-		};
-		winmax: window_maximised {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&macro-press &kp LGUI>
-			, <&macro-tap &kp UP>;
-			, <&macro-release &kp LGUI>
-			;
-		};
-		winmin: window_minimised {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&macro-press &kp LGUI>
-			, <&macro-tap &kp H>;
-			, <&macro-release &kp LGUI>
-			;
-		};
-		alwinmin: minimise_all_windows {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&macro-press &kp LGUI>
-			, <&macro-tap &kp D>;
-			, <&macro-release &kp LGUI>
-			;
-		};
-		forwin: forward_window {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&macro-press &kp LALT>
-			, <&macro-tap &kp TAB>;
-			, <&macro-release &kp LALT>
-			;
-		};
-		backwin: backward_window {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&macro-press &kp LALT>
-			, <&macro-press &kp LSHFT>
-			, <&macro-tap &kp TAB>;
-			, <&macro-release &kp LSHFT>
-			, <&macro-release &kp LALT>
-			;
-		};
-		appwin: open_application_window {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&macro-press &kp LGUI>
-			, <&macro-tap &kp A>;
-			, <&macro-release &kp LGUI>
-			;
-		};
-	};
-	combos {
-		compatible = "zmk,combos";
-		combo_layer_gaming {
-			timeout-ms = <50>;
-			key-positions = <24 25>;
-			bindings = <&tog GAMING>;
-		};
-		combo_layer_applauch {
-			timout-ms = <50>;
-			key-position = <12 38>;
-			bindings = <&mo APPLAUCH>;
-		};
-		combo_layer_mediactrl {
-			timout-ms = <50>;
-			key-positions = <12 37>;
-			bindings = <&mo MEDIADISP>;
-		};
-		combo_layer_windowman {
-			timout-ms = <50>;
-			key-position = <12 36>;
-			bindings = <&mo WINDOWMAN>;
-		};
-	};
-};
-		
-/ {
-        keymap {
-                compatible = "zmk,keymap";
+    behaviors {
+        exction: exction {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EXCTION";
+            bindings = <&kp EXCL>, <&kp QUESTION>;
 
-                base_layer {
-// -----------------------------------------------------------------------------------------
-// | TAB LALT |  W  |  L  |  R  |  B  |  Z      |   | APOS |  Q   |  U  |  D  |  P  | lrpesc |
-// |  - GUI   |  S  |  H  |  N  |  T  | SEMI    |   |  G   |  A   |  E  |  O  |  I  | lrbkt  |
-// |  _ CTRL  |  F  |  M  |  V  |  C  | exction |   |  / \ |  P   |  X  |  K  |  Y  | lrbrc  |
-//                    | shilock | NAVI | NUM |            | ENTER SYMBOLES | SPC EDITION  | doco LINGI |
-                        bindings = <
-   &tabalt	&kp W	&kp L	&kp R	&kp B	&kp Z		&kp APOS	&kp Q	&kp U	&kp D	&kp J	&lrpesc
-   &guimin	&kp S	&kp H	&kp N	&kp T	&kp SEMI	&kp G 		&kp A	&kp E	&kp O	&kp I	&lrbkt
-   &undrctrl	&kp F	&kp M	&kp V	&kp C	&exction	&slbsl		&kp P	&kp X	&kp K	&kp Y	 &lrbrc
-         &shilock    MO_TOG(NAVI)    MO_TOG(NUM)		&symter   &edispc   &lindoco
-                        >;
-                };
-		gaming_layer {
-			bindings = <
-	&kp ESC	&kp T		&kp Q	&kp W	&kp E	&kp R		&none	&none	&none	&none	&none	&none
-	&kp I	&kp TAB		&kp A	&kp S	&kp D	&kp F		&none	&none	&none	&none	&none	&none
-	&kp O	&kp LSHFT	&kp Z	&kp X	&kp C	&kp V		&none	&none	&none	&none	&none	&none
-		&mo GAMINGNUM	&kp LALT	&kp SPC			&none	&none	&none
-			>;
-		};
-                lingi_layer {
-// -----------------------------------------------------------------------------------------
-// |     |  aa  |  ea  |  ia  |  oa  |  ua  |   |  ad  |  ed  |  id  |  od  |    ud     |    |
-// |     |  ag  |  eg  |  ig  |  og  |  ug  |   |  at  |  et  |  ot  |  nt  |    ss     |    |
-// |     |  ac  |  ec  |  ic  |  od  |  ud  |   |  ae  |  os  |  oe  |  ar  |  cedille  |    |
-//              |  LSHFT   |  LINGI2   |     |              |     |     |     |
-                        bindings = <
-   &none  &aa	&ea	&ia	&oa	&ua	&ad	&ed	&id	&od	&ud		&none
-   &none  &ag	&eg	&ig	&og	&ug	&at	&et	&ot	&nt	&ss		&none
-   &none  &ac	&ec	&ic	&od	&ud	&ae	&os	&oe	&ar	&cedille	&none
-	&kp LSHFT	&mo LINGI2	&none		&none	&none	&none
-                        >;
-                };
-
-                lingi2_layer {
-// -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |     |   |  alpha    |  Beta   |  gamma  |  delta   |  epsi   |      |
-// |     |     |     |     |     |     |   |  lambda   |  mu     |  pi     |  rho     |  sigma  |      |
-// |     |     |     |     |     |     |   |  sigma2   |  tau    |  phi    |   psi    |  omega  |      |
-//                   |     |     |     |   |     |     |     |
-                        bindings = <
-   &none	&none	&none	&none	&none	&none	&kp U03B1	&kp U03B2	&kp U03B3	&kp U0394	&kp U03B5	&none
-   &none	&none	&none	&none	&none	&none	&kp U03BB	&kp U03BC	&kp U03C0	&kp U03C1	&kp U03A3	&none
-   &none	&none	&none	&none	&none	&none	&kp U03C3	&kp U03C4  	&kp U03C6 	&kp U03C8 	&kp U03A9	&none
-                             &none	&none	&none	&none	&none	&none
-                        >;
-                };
-                symbols_layer {
-// -----------------------------------------------------------------------------------------
-// |	|  YEN  |  ster  |  euro     | dollar |  curren |   | becarre |  bemole   |  hash         |  degre         |      |    |
-// |	|   x   |  div   |  square   |  cir   |   puce  |   |  tilde  |  &        |  &&           |  DoublePIPE    | PIPE |    |
-// |	|   c   |   r    |  TM       |  par   |   par   |   |  median |  @        |  frquoteopen  |  frquoteclose  |      |    |
-//                    |    |    |    |                     |     |     |     |
-                        bindings = <
-   &none	&kp INT_YEN	&kp U00A3	&kp U20AC	&kp DLLR	&kp U00A4		&kp U266E	&kp U266D	&kp Hash	&kp U00B0	&none 		&kp U00B4
-   &none	&kp U00D7	&kp U00F7	&kp U221A	&kp U005E	&kp U2022		&kp TILDE 	&kp AMPS	&kp dubamps	&kp dubpipe	&kp PIPE	&kp U0060
-   &none	&kp U00A9	&kp U00AE	&kp U2122	&kp U00A7	&kp U00B6		&kp U00B7	&kp AT		&kp U00AB	&kp U00BB	&none	 	&kp U00A8
-        							 &none    &none    &none		&none   &none   &none
-                        >;
-                };
-                num_layer {
-// -----------------------------------------------------------------------------------------
-// |     |  GUI  |  F1  |  F2  |  F3  |  F4  |   |  0   |  1  |  2  |  3  |  PLUS   |  MINUS  |
-// | TAB |  ALT  |  F5  |  F6  |  F7  |  F8  |   |  lel |  4  |  5  |  6  |  STAR   |  FSLH   |
-// |     |  FN   |  F9  |  F10 |  F11 |  F12 |   |  geg |  7  |  8  |  9  |  PRCNT  |         |
-//              |  LSHFT   |     |     |              |     |     |     |
-                        bindings = <
-   &none	&LGUI	&kp F1	&kp F2	&kp F3	&kp F4		&zero	&one	&two	&three	&kp PLUS	&kp MINUS
-   &kp TAB	&LALT	&kp F5	&kp F6	&kp F7	&kp F8		&lel	&four	&five	&six	&kp STAR	&kp FSLH
-   &none	&	&kp F9	&kp F10	&kp F11	&kp F12		&geg	&seven	&eight	&nine	&kp PRCNT	&none
-		&kp LSHFT	&none	&none				&none	&none	&eine
-                        >;
-                };
-		gamingnum_layer {
-			bindings = <
-	&kp F1	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5		&none	&none	&none	&none	&none	&none
-	&kp F2	&kp N6	&kp N7	&kp N8	&kp N9	&kp N0		&none	&none	&none	&none	&none	&none
-	&kp F3	&kp F4	&kp F5	&kp F6	&kp F7	&kp F8		&none	&none	&none	&none	&none	&none
-		&none	&kp F9	&kp F11					&none	&none	&none
-			>;
-		};
-                edition_layer {
-                        bindings = <
-   &none	&kp TAB		&kp K_UNDO	&kp UP		&kp K_REDO	&kp C_AC_SAVE		&kp BSPC	&kp DEL		&bspcw	 	&delw	&dell	&permdel
-   &none	&none		&kp LEFT	&kp DOWN	&kp RIGHT	&none			&kp K_CUT	&kp K_COPY	&kp K_PASTE	&none	&none	&none
-   &none	&kp HOME	&kp PG_UP	&selall		&kp PG_DN	&kp END			&none		&none 	 	&none	 	&none 	&none	&none
-                          			&none		&kp INS		&kp LSHFT		&none		&none		&none
-                        >;
-                };
-                navi_layer {
-                        bindings = <
-   &none	&none	&none	&none	&none	&none			&kp HOME	&kp K_UNDO	&kp UP	 	&delw		&none	&kp ESC
-   &none	&none	&none	&none	&none	&none			&kp END		&kp LEFT	&kp DOWN	&kp RIGHT	&none	&kp TAB
-   &none	&none	&none	&none	&none	&none			&none		&kp PG_UP	&pghome		&PG_DOWN	&pgend	&none
-                        	&none	&none	&none			&kp LSHFT	&kp LALT	&none
-                        >;
-                };
-                applaunch_layer {
-                        bindings = <
-   &none	&none	&none	&none	&none	&none		&kp C_AL_MOVIES		&kp C_AL_AUDIO			&kp C_AL_IMAGES		&kp C_AL_CAL	&kp C_AL_MAIL			&none
-   &none	&none	&none	&none	&none	&none		&kp C_AL_MY_COMPUTER	&kp C_AL_TEXT_EDITOR		&kp C_AL_FILES		&kp K_WWW	&appwin				&none
-   &none	&none	&none	&none	&none	&none		&kp C_AL_CALC		&kp C_AL_GRAPHICS_EDITOR	&kp C_AL_CONTROL_PANEL	&kp C_AL_DB	&kp C_AL_KEYBOARD_LAYOUT	&none
-   				&none	&none	&none		&none			&none				&none
-                        >;
-                };
-		mediadisp_layer {
-                        bindings = <
-   &none	&none		&none		&none		&none		&none			&none	&kp C_VOL_DN	&kp C_VOL_UP	&kp C_MUTE	&none	&none
-   &none	&kp C_BRI_DN	&kp C_BRI_UP	&kp C_BRI_MIN	&kp C_BRI_MAX	&none			&none	&kp C_PP	&kp C_PREV	&kp C_NEXT	&none	&none
-   &none	&none		&none		&none		&none		&none			&none	&kp C_RW	&kp C_FF	&none		&none	&none
-                        	&none	&none	&none						&none	&none	&none
-                        >;
-                };
-		windowman_layer {
-                        bindings = <
-   &none	&none		&none		&none		&none		&none			&none	&backwin	&winmax		&forwin		&none	&none
-   &none	&none		&none		&none		&none		&none			&none	&winleft	&winmin		&winright	&none	&none
-   &none	&none		&none		&none		&none		&none			&none	&none		&allwinmin	&none		&none	&none
-                          			&none		&none		&none			&kp C_AL_SELECT_TASK	&kp C_AL_NEXT_TASK	&kp C_AL_PREV_TASK
-                        >;
-                };
-                cc_layer {
-                        bindings = <
-   &none	&none	&none	&none	&none	&none			&none		&none		&none 		&none		&none		&none
-   &none	&none	&none	&none	&none	&none			&kp C_PWR	&kp C_RESET	&kp K_LOCK 	&kp C_SLEEP	&kp C_AL_LOGOFF	&none
-   &none	&none	&none	&none	&none	&none			&none		&none		&none		&none		&none		&none
-                        	&none	&none	&none			&none		&none		&none
-				>;
-                };
-                kc_layer {
-                        bindings = <
-   &none	&kp TAB		&kp K_UNDO	&kp UP		&kp K_REDO	&kp C_AC_SAVE		&kp BSPC	&kp DEL		&bspcw	 	&delw	&dell	&permdel
-   &none	&none		&kp LEFT	&kp DOWN	&kp RIGHT	&none			&kp K_CUT	&kp K_COPY	&kp K_PASTE	&none	&none	&none
-   &none	&kp HOME	&kp PG_UP	&selall		&kp PG_DN	&kp END			&none		&none 	 	&none	 	&none 	&none	&none
-                          			&none		&kp INS		&kp LSHFT		&none		&none		&none
-                        >;
-                };
-                locked_layer {
-                        bindings = <
-   &none	&none	&none	&none	&none	&none			&none	&none	&none 	&none	&none	&none
-   &none	&none	&none	&none	&none	&none			&none	&none	&none	&none	&none	&none
-   &none	&none	&none	&none	&none	&none			&none	&none	&none	&none	&none	&none
-                        	&none	&none	&none			&none	&none	&none
-                        >;
-                };
-
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
+
+        lrpar: lrpar {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LRPAR";
+            bindings = <&kp LPAR>, <&kp RPAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        lrpesc: lrpesc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LRPESC";
+            bindings = <&lrpar>, <&kp ESCAPE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        lrbkt: lrbkt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LRBKT";
+            bindings = <&kp LBKT>, <&kp RBKT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        lrbrc: lrbrc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LRBRC";
+            bindings = <&kp LBRC>, <&kp RBRC>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        doco: doco {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOCO";
+            bindings = <&kp DOT>, <&kp COMMA>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        slbsl: slbsl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SLBSL";
+            bindings = <&kp SLASH>, <&kp BACKSLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        homerow: homerow {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW";
+            bindings = <&sk>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <15 14 13>;
+            tapping-term-ms = <200>;
+        };
+    };
+
+    macros {
+    };
+
+    combos { compatible = "zmk,combos"; };
+};
+
+/ {
+    behaviors {
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        base {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        Lingi_1 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        lingi_2 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_7 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_8 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_9 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_10 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_11 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_12 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_13 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_14 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+    };
 };
