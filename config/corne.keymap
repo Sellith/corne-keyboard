@@ -326,6 +326,69 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        Tilde_a: Tilde_a {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TILDE_A";
+            bindings = <&atm>, <&at>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Tilde_o: Tilde_o {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TILDE_O";
+            bindings = <&otm>, <&ot>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Tilde_n: Tilde_n {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TILDE_N";
+            bindings = <&ntm>, <&nt>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Combi_ae: Combi_ae {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMBI_AE";
+            bindings = <&aem>, <&AE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Combi_oe: Combi_oe {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMBI_OE";
+            bindings = <&oem>, <&OE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Combi_o_barre: Combi_o_barre {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMBI_O_BARRE";
+            bindings = <&o_barrem>, <&O_barre>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Combi_ringed_A: Combi_ringed_A {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMBI_RINGED_A";
+            bindings = <&arm>, <&Ar>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -1141,6 +1204,318 @@
 
             label = "UCM";
         };
+
+        ntm: ntm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N4 &kp N1>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "NTM";
+        };
+
+        nt: nt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N0 &kp N9>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "NT";
+        };
+
+        atm: atm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N2 &kp N7>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "ATM";
+        };
+
+        at: at {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N9 &kp N5>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "AT";
+        };
+
+        otm: otm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N4 &kp N5>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "OTM";
+        };
+
+        ot: ot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N1 &kp N3>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "OT";
+        };
+
+        Orange_layer_2: Orange_layer_2 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&rgb_ug RGB_COLOR_HSB(38,100,70) &macro_param_1to1>,
+                <&macro_press>,
+                <&mo MACRO_PLACEHOLDER>,
+                <&macro_press>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(301,100,48)>;
+
+            label = "ORANGE_LAYER_2";
+        };
+
+        alpham: alpha {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N9 &kp N4 &kp N5>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "ALPHA";
+        };
+
+        betam: betam {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N9 &kp N4 &kp N6>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "BETAM";
+        };
+
+        gammam: gammam {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N9 &kp N4 &kp N7>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "GAMMAM";
+        };
+
+        Delta: Delta {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N9 &kp N1 &kp N6>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "DELTA";
+        };
+
+        epsilonm: epsilonm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N9 &kp N4 &kp N9>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "EPSILONM";
+        };
+
+        zetam: zetam {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N9 &kp N5 &kp N0>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "ZETAM";
+        };
+
+        thetam: thetam {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N9 &kp N5 &kp N2>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "THETAM";
+        };
+
+        lambda: lambda {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N9 &kp N5 &kp N5>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "LAMBDA";
+        };
+
+        mum: mum {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N9 &kp N5 &kp N6>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "MUM";
+        };
+
+        pim: pim {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N9 &kp N6 &kp N0>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "PIM";
+        };
+
+        Sigmam: Sigmam {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N9 &kp N3 &kp N1>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "SIGMAM";
+        };
+
+        phim: phim {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N9 &kp N6 &kp N6>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "PHIM";
+        };
+
+        psim: psim {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N9 &kp N6 &kp N8>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "PSIM";
+        };
+
+        omega: omega {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N9 &kp N3 &kp N7>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "OMEGA";
+        };
+
+        omegam: omegam {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N9 &kp N6 &kp N9>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "OMEGAM";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -1153,7 +1528,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        base {
+        win_base {
             bindings = <
 &kp ESC   &kp W             &kp L                &kp R                 &kp B             &kp Z               &kp SQT              &kp Q               &kp U             &kp D  &kp J  &lrpar
 &kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T             &kp SEMI            &kp G                &kp A               &kp E             &kp O  &kp I  &lrbkt
@@ -1162,34 +1537,34 @@
             >;
         };
 
-        Lingi_1 {
+        win_Lingi_1 {
             bindings = <
-&trans  &Acute_a      &Acute_e      &Acute_i      &Acute_o      &Acute_u        &Caret_a  &Caret_e  &Caret_i  &Caret_o  &Caret_u  &trans
-&trans  &Grave_a      &Grave_e      &Acute_i      &Grave_o      &Grave_u        &trans    &trans    &trans    &trans    &trans    &trans
-&trans  &Diaeresis_a  &Diaeresis_e  &Diaeresis_i  &Diaeresis_o  &Diaeresis_u    &trans    &trans    &trans    &trans    &trans    &trans
-                                    &trans        &trans        &trans          &trans    &trans    &trans
+&none  &Acute_a      &Acute_e      &Acute_i      &Acute_o      &Acute_u            &Caret_a     &Caret_e   &Caret_i   &Caret_o        &Caret_u         &none
+&none  &Grave_a      &Grave_e      &Acute_i      &Grave_o      &Grave_u            &ss          &Tilde_a   &Tilde_o   &Tilde_n        &trans           &none
+&none  &Diaeresis_a  &Diaeresis_e  &Diaeresis_i  &Diaeresis_o  &Diaeresis_u        &c_cedille_  &Combi_ae  &Combi_oe  &Combi_o_barre  &Combi_ringed_A  &none
+                                   &none         &kp LSHFT     &orangelayer 2 0    &none        &none      &none
             >;
         };
 
-        Lingi_2 {
+        win_Lingi_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&none  &none  &none  &none  &none  &none    &alpham  &betam   &gammam  &Delta  &epsilonm  &none
+&none  &none  &none  &none  &none  &none    &zetam   &thetam  &lambda  &mum    &pim       &none
+&none  &none  &none  &none  &none  &none    &Sigmam  &phim    &psim    &omega  &omegam    &none
+                     &none  &none  &none    &none    &none    &none
             >;
         };
 
-        Symbols {
+        win_Symbols {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&none  &kp INT_YEN  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&none  &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&none  &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
-        Numeric {
+        win_Numeric {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
