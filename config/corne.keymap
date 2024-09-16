@@ -245,6 +245,51 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        Diaeresis_a: Diaeresis_a {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DIAERESIS_A";
+            bindings = <&adm>, <&ad>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Diaeresis_e: Diaeresis_e {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DIAERESIS_E";
+            bindings = <&edm>, <&ed>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Diaeresis_i: Diaeresis_i {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DIAERESIS_I";
+            bindings = <&idm>, <&id>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Diaeresis_o: Diaeresis_o {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DIAERESIS_O";
+            bindings = <&odm>, <&od>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Diaeresis_u: Diaeresis_u {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DIAERESIS_U";
+            bindings = <&udm>, <&ud>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -781,7 +826,7 @@
             label = "OGM";
         };
 
-        adm: ad {
+        adm: adm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -792,7 +837,7 @@
                 <&macro_release>,
                 <&kp LALT>;
 
-            label = "AD";
+            label = "ADM";
         };
 
         edm: edm {
@@ -943,10 +988,10 @@
 
         Lingi_1 {
             bindings = <
-&trans  &Acute_a  &Acute_e  &Acute_i  &Acute_o  &Acute_u    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &Grave_a  &Grave_e  &Acute_i  &Grave_o  &Grave_u    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &trans    &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans    &trans    &trans      &trans  &trans  &trans
+&trans  &Acute_a      &Acute_e      &Acute_i      &Acute_o      &Acute_u        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &Grave_a      &Grave_e      &Acute_i      &Grave_o      &Grave_u        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &Diaeresis_a  &Diaeresis_e  &Diaeresis_i  &Diaeresis_o  &Diaeresis_u    &trans  &trans  &trans  &trans  &trans  &trans
+                                    &trans        &trans        &trans          &trans  &trans  &trans
             >;
         };
 
