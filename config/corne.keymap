@@ -1879,19 +1879,19 @@
 
         win_Symbols {
             bindings = <
-&none  &kp INT_YEN  &pound     &euro       &kp DOLLAR  &currency      &becarre   &bemol    &kp HASH            &degre               &trans     &acute_accent
+&none  &kp INT_YEN  &pound     &euro       &kp DOLLAR  &currency      &becarre   &bemol    &kp HASH            &degre               &none      &acute_accent
 &none  &multi       &division  &racine     &carret     &puce          &kp TILDE  &kp AMPS  &dubamps            &kp PIPE             &dubpipes  &grave_accent
-&none  &copyright   &label     &trademark  &nouv_para  &paragraphe    &median    &kp AT    &french_quote_open  &french_quote_close  &trans     &Diaeresis
-                               &trans      &trans      &trans         &trans     &trans    &trans
+&none  &copyright   &label     &trademark  &nouv_para  &paragraphe    &median    &kp AT    &french_quote_open  &french_quote_close  &none      &Diaeresis
+                               &none       &none       &none          &none      &none     &none
             >;
         };
 
         win_Numeric {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&kp LGUI   &kp F1  &kp F2   &kp F3   &kp F4   &none             &trans     &trans  &trans  &trans  &kp PLUS     &kp MINUS
+&kp LALT   &kp F5  &kp F6   &kp F7   &kp F8   &none             &trans     &trans  &trans  &trans  &kp ASTRK    &kp FSLH
+&kp LCTRL  &kp F9  &kp F10  &kp F11  &kp F12  &none             &trans     &trans  &trans  &trans  &kp PERCENT  &trans
+                            &none    &none    &release_tog 4    &kp LSHFT  &trans  &trans
             >;
         };
 
