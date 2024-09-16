@@ -285,7 +285,7 @@
             label = "YELLOW";
         };
 
-        ae: ae {
+        aem: ae {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -313,7 +313,7 @@
             label = "AE";
         };
 
-        c_cedille: c_cedille {
+        c_cedillem: c_cedille {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -341,7 +341,7 @@
             label = "C_CEDILLE";
         };
 
-        o_barre: o_barre {
+        o_barrem: o_barre {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -383,7 +383,7 @@
             label = "SS";
         };
 
-        oe: oe {
+        oem: oe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -411,7 +411,7 @@
             label = "OE";
         };
 
-        ar: ar {
+        arm: ar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -453,7 +453,7 @@
             label = "AA";
         };
 
-        aa: aa {
+        aam: aa {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -481,7 +481,7 @@
             label = "EA";
         };
 
-        ea: ea {
+        eam: ea {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -509,7 +509,7 @@
             label = "IA";
         };
 
-        ia: ia {
+        iam: ia {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -537,7 +537,7 @@
             label = "OA";
         };
 
-        oa: oa {
+        oam: oa {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -565,7 +565,7 @@
             label = "UA";
         };
 
-        ua: ua {
+        uam: ua {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
