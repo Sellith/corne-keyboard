@@ -164,6 +164,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        Acute_a: Acute_a {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ACUTE_A";
+            bindings = <&aam>, <&Aa>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -294,7 +303,7 @@
             label = "YELLOW";
         };
 
-        aem: ae {
+        aem: aem {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -305,7 +314,7 @@
                 <&macro_release>,
                 <&kp LALT>;
 
-            label = "AE";
+            label = "AEM";
         };
 
         AE: AE {
@@ -322,7 +331,7 @@
             label = "AE";
         };
 
-        c_cedillem: c_cedille {
+        c_cedillem: c_cedillem {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -333,7 +342,7 @@
                 <&macro_release>,
                 <&kp LALT>;
 
-            label = "C_CEDILLE";
+            label = "C_CEDILLEM";
         };
 
         C_cedille: C_cedille {
@@ -350,7 +359,7 @@
             label = "C_CEDILLE";
         };
 
-        o_barrem: o_barre {
+        o_barrem: o_barrem {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -361,7 +370,7 @@
                 <&macro_release>,
                 <&kp LALT>;
 
-            label = "O_BARRE";
+            label = "O_BARREM";
         };
 
         O_barre: O_barre {
@@ -392,7 +401,7 @@
             label = "SS";
         };
 
-        oem: oe {
+        oem: oem {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -403,7 +412,7 @@
                 <&macro_release>,
                 <&kp LALT>;
 
-            label = "OE";
+            label = "OEM";
         };
 
         OE: OE {
@@ -420,7 +429,7 @@
             label = "OE";
         };
 
-        arm: ar {
+        arm: arm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -431,7 +440,7 @@
                 <&macro_release>,
                 <&kp LALT>;
 
-            label = "AR";
+            label = "ARM";
         };
 
         Ar: Ar {
@@ -462,7 +471,7 @@
             label = "AA";
         };
 
-        aam: aa {
+        aam: aam {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -473,7 +482,7 @@
                 <&macro_release>,
                 <&kp LALT>;
 
-            label = "AA";
+            label = "AAM";
         };
 
         Ea: Ea {
@@ -490,7 +499,7 @@
             label = "EA";
         };
 
-        eam: ea {
+        eam: eam {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -501,7 +510,7 @@
                 <&macro_release>,
                 <&kp LALT>;
 
-            label = "EA";
+            label = "EAM";
         };
 
         Ia: Ia {
@@ -518,7 +527,7 @@
             label = "IA";
         };
 
-        iam: ia {
+        iam: iam {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -529,7 +538,7 @@
                 <&macro_release>,
                 <&kp LALT>;
 
-            label = "IA";
+            label = "IAM";
         };
 
         Oa: Oa {
@@ -546,7 +555,7 @@
             label = "OA";
         };
 
-        oam: oa {
+        oam: oam {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -557,7 +566,7 @@
                 <&macro_release>,
                 <&kp LALT>;
 
-            label = "OA";
+            label = "OAM";
         };
 
         Ua: Ua {
@@ -574,7 +583,7 @@
             label = "UA";
         };
 
-        uam: ua {
+        uam: uam {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -585,7 +594,7 @@
                 <&macro_release>,
                 <&kp LALT>;
 
-            label = "UA";
+            label = "UAM";
         };
     };
 
