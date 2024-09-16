@@ -1516,6 +1516,328 @@
 
             label = "OMEGAM";
         };
+
+        pound: pound {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N6 &kp N3>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "POUND";
+        };
+
+        euro: euro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N2 &kp N8>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "EURO";
+        };
+
+        currency: currency {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N6 &kp N4>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "CURRENCY";
+        };
+
+        multi: multi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N1 &kp N5>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "MULTI";
+        };
+
+        division: division {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N4 &kp N7>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "DIVISION";
+        };
+
+        racine: racine {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N5 &kp N1>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "RACINE";
+        };
+
+        carret: carret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N3 &kp N6>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "CARRET";
+        };
+
+        puce: puce {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N4 &kp N9>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "PUCE";
+        };
+
+        copyright: copyright {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N6 &kp N9>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "COPYRIGHT";
+        };
+
+        label: label {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N7 &kp N4>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "LABEL";
+        };
+
+        trademark: trademark {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N5 &kp N3>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "TRADEMARK";
+        };
+
+        nouv_para: nouv_para {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N6 &kp N7>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "NOUV_PARA";
+        };
+
+        paragraphe: paragraphe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N8 &kp N2>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "PARAGRAPHE";
+        };
+
+        bemol: bemol {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N9 &kp N8 &kp N3 &kp N7>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "BEMOL";
+        };
+
+        becarre: becarre {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N9 &kp N8 &kp N3 &kp N8>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "BECARRE";
+        };
+
+        degre: degre {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N7 &kp N6>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "DEGRE";
+        };
+
+        median: median {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N8 &kp N3>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "MEDIAN";
+        };
+
+        french_quote_open: french_quote_open {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N7 &kp N1>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "FRENCH_QUOTE_OPEN";
+        };
+
+        french_quote_close: french_quote_close {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N8 &kp N7>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "FRENCH_QUOTE_CLOSE";
+        };
+
+        acute_accent: acute_accent {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N8 &kp N0>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "ACUTE_ACCENT";
+        };
+
+        grave_accent: grave_accent {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N9 &kp N6>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "GRAVE_ACCENT";
+        };
+
+        Diaeresis: Diaeresis {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N6 &kp N8>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "DIAERESIS";
+        };
+
+        dubamps: dubamps {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp AMPS &kp AMPS>;
+            label = "DUBAMPS";
+        };
+
+        dubpipes: dubpipes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PIPE &kp PIPE>;
+            label = "DUBPIPES";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -1557,10 +1879,10 @@
 
         win_Symbols {
             bindings = <
-&none  &kp INT_YEN  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&none  &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&none  &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans  &trans  &trans    &trans  &trans  &trans
+&none  &kp INT_YEN  &pound     &euro       &kp DOLLAR  &currency      &becarre   &bemol    &kp HASH            &degre               &trans     &acute_accent
+&none  &multi       &division  &racine     &carret     &puce          &kp TILDE  &kp AMPS  &dubamps            &kp PIPE             &dubpipes  &grave_accent
+&none  &copyright   &label     &trademark  &nouv_para  &paragraphe    &median    &kp AT    &french_quote_open  &french_quote_close  &trans     &Diaeresis
+                               &trans      &trans      &trans         &trans     &trans    &trans
             >;
         };
 
