@@ -494,6 +494,90 @@
 
             label = "EA";
         };
+
+        Ia: Ia {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N0 &kp N5>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "IA";
+        };
+
+        ia: ia {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N3 &kp N7>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "IA";
+        };
+
+        Oa: Oa {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N1 &kp N1>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "OA";
+        };
+
+        oa: oa {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N4 &kp N3>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "OA";
+        };
+
+        Ua: Ua {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N1 &kp N8>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "UA";
+        };
+
+        ua: ua {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N5 &kp N0>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "UA";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
