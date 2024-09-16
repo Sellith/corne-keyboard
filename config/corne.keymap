@@ -42,15 +42,6 @@
             mods = <(MOD_LSFT)>;
         };
 
-        lrpesc: lrpesc {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LRPESC";
-            bindings = <&lrpar>, <&kp ESCAPE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-        };
-
         lrbkt: lrbkt {
             compatible = "zmk,behavior-mod-morph";
             label = "LRBKT";
@@ -286,6 +277,51 @@
             compatible = "zmk,behavior-mod-morph";
             label = "DIAERESIS_U";
             bindings = <&udm>, <&ud>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Caret_a: Caret_a {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CARET_A";
+            bindings = <&acm>, <&ac>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Caret_e: Caret_e {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CARET_E";
+            bindings = <&ecm>, <&ec>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Caret_i: Caret_i {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CARET_I";
+            bindings = <&icm>, <&ic>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Caret_o: Caret_o {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CARET_O";
+            bindings = <&ocm>, <&oc>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Caret_u: Caret_u {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CARET_U";
+            bindings = <&ucm>, <&uc>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -965,6 +1001,146 @@
 
             label = "UD";
         };
+
+        ac: ac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N9 &kp N4>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "AC";
+        };
+
+        ec: ec {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N0 &kp N2>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "EC";
+        };
+
+        ic: ic {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N0 &kp N6>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "IC";
+        };
+
+        oc: oc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N1 &kp N2>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "OC";
+        };
+
+        uc: uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N1 &kp N9>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "UC";
+        };
+
+        acm: acm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N2 &kp N6>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "ACM";
+        };
+
+        ecm: ecm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N3 &kp N4>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "ECM";
+        };
+
+        icm: icm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N3 &kp N8>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "ICM";
+        };
+
+        ocm: ocm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N4 &kp N4>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "OCM";
+        };
+
+        ucm: ucm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N5 &kp N1>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "UCM";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -988,10 +1164,10 @@
 
         Lingi_1 {
             bindings = <
-&trans  &Acute_a      &Acute_e      &Acute_i      &Acute_o      &Acute_u        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &Grave_a      &Grave_e      &Acute_i      &Grave_o      &Grave_u        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &Diaeresis_a  &Diaeresis_e  &Diaeresis_i  &Diaeresis_o  &Diaeresis_u    &trans  &trans  &trans  &trans  &trans  &trans
-                                    &trans        &trans        &trans          &trans  &trans  &trans
+&trans  &Acute_a      &Acute_e      &Acute_i      &Acute_o      &Acute_u        &Caret_a  &Caret_e  &Caret_i  &Caret_o  &Caret_u  &trans
+&trans  &Grave_a      &Grave_e      &Acute_i      &Grave_o      &Grave_u        &trans    &trans    &trans    &trans    &trans    &trans
+&trans  &Diaeresis_a  &Diaeresis_e  &Diaeresis_i  &Diaeresis_o  &Diaeresis_u    &trans    &trans    &trans    &trans    &trans    &trans
+                                    &trans        &trans        &trans          &trans    &trans    &trans
             >;
         };
 
