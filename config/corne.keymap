@@ -382,6 +382,118 @@
 
             label = "SS";
         };
+
+        oe: oe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N5 &kp N6>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "OE";
+        };
+
+        OE: OE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N4 &kp N0>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "OE";
+        };
+
+        ar: ar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N2 &kp N9>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "AR";
+        };
+
+        Ar: Ar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N9 &kp N7>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "AR";
+        };
+
+        Aa: aa {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N9 &kp N3>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "AA";
+        };
+
+        aa: aa {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N2 &kp N5>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "AA";
+        };
+
+        Ea: Ea {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N0 &kp N1>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "EA";
+        };
+
+        ea: ea {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N3 &kp N3>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "EA";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
