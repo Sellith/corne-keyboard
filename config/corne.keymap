@@ -173,6 +173,42 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        Acute_e: Acute_e {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ACUTE_E";
+            bindings = <&eam>, <&Ea>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Acute_i: Acute_i {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ACUTE_I";
+            bindings = <&iam>, <&Ia>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Acute_o: Acute_o {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ACUTE_O";
+            bindings = <&oam>, <&Oa>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Acute_u: Acute_u {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ACUTE_U";
+            bindings = <&uam>, <&Ua>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -596,6 +632,118 @@
 
             label = "UAM";
         };
+
+        ag: ag {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N9 &kp N2>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "AG";
+        };
+
+        agm: agm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N2 &kp N4>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "AGM";
+        };
+
+        eg: eg {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N0 &kp N0>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "EG";
+        };
+
+        egm: egm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N3 &kp N9>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "EGM";
+        };
+
+        ug: ug {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N1 &kp N7>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "UG";
+        };
+
+        ugm: ugm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N4 &kp N9>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "UGM";
+        };
+
+        og: og {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N1 &kp N0>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "OG";
+        };
+
+        ogm: ogm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N4 &kp N2>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "OGM";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -619,10 +767,10 @@
 
         Lingi_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &Acute_a  &Acute_e  &Acute_i  &Acute_o  &Acute_u    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans    &trans    &trans      &trans  &trans  &trans
             >;
         };
 
