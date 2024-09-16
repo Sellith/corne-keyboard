@@ -209,6 +209,42 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        Grave_a: Grave_a {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRAVE_A";
+            bindings = <&agm>, <&ag>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Grave_e: Grave_e {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRAVE_E";
+            bindings = <&egm>, <&eg>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Grave_o: Grave_o {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRAVE_O";
+            bindings = <&ogm>, <&og>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Grave_u: Grave_u {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRAVE_U";
+            bindings = <&ugm>, <&ug>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -744,6 +780,146 @@
 
             label = "OGM";
         };
+
+        adm: ad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N2 &kp N8>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "AD";
+        };
+
+        edm: edm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N3 &kp N5>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "EDM";
+        };
+
+        idm: idm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N3 &kp N9>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "IDM";
+        };
+
+        odm: odm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N4 &kp N6>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "ODM";
+        };
+
+        udm: udm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N5 &kp N2>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "UDM";
+        };
+
+        ad: ad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N9 &kp N6>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "AD";
+        };
+
+        ed: ed {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N0 &kp N3>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "ED";
+        };
+
+        id: id {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N0 &kp N7>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "ID";
+        };
+
+        od: od {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N1 &kp N4>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "OD";
+        };
+
+        ud: ud {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &kp N2 &kp N0>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "UD";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -768,7 +944,7 @@
         Lingi_1 {
             bindings = <
 &trans  &Acute_a  &Acute_e  &Acute_i  &Acute_o  &Acute_u    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &trans    &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &Grave_a  &Grave_e  &Acute_i  &Grave_o  &Grave_u    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans    &trans    &trans    &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
                             &trans    &trans    &trans      &trans  &trans  &trans
             >;
