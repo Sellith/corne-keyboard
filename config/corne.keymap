@@ -451,6 +451,51 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        Linux_Grave_A: Linux_Grave_A {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LINUX_GRAVE_A";
+            bindings = <&lagm>, <&lag>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Linux_Grave_E: Linux_Grave_E {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LINUX_GRAVE_E";
+            bindings = <&legm>, <&leg>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Linux_Grave_I: Linux_Grave_I {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LINUX_GRAVE_I";
+            bindings = <&ligm>, <&lig>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Linux_Grave_O: Linux_Grave_O {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LINUX_GRAVE_O";
+            bindings = <&logm>, <&log>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Linux_Grave_U: Linux_Grave_U {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LINUX_GRAVE_U";
+            bindings = <&lugm>, <&lug>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -2204,6 +2249,166 @@
 
             label = "LUA";
         };
+
+        lagm: lagm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp E &kp N0 &kp RET>;
+
+            label = "LAGM";
+        };
+
+        lag: lag {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp C &kp N0 &kp RET>;
+
+            label = "LAG";
+        };
+
+        legm: legm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp E &kp N8 &kp RET>;
+
+            label = "LEGM";
+        };
+
+        leg: leg {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp C &kp N8 &kp RET>;
+
+            label = "LEG";
+        };
+
+        ligm: ligm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp E &kp C &kp RET>;
+
+            label = "LIGM";
+        };
+
+        lig: lig {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp C &kp C &kp RET>;
+
+            label = "LIG";
+        };
+
+        logm: logm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp F &kp N2 &kp RET>;
+
+            label = "LOGM";
+        };
+
+        log: log {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp D &kp N2 &kp RET>;
+
+            label = "LOG";
+        };
+
+        lugm: lugm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp F &kp N9 &kp RET>;
+
+            label = "LUGM";
+        };
+
+        lug: lug {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp D &kp N9 &kp RET>;
+
+            label = "LUG";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -2228,7 +2433,7 @@
         lin_lingi_1 {
             bindings = <
 &none  &Linux_Acute_A  &Linux_Acute_E  &Linux_Acute_I  &Linux_Acute_O  &Linux_Acute_U    &none  &none  &none  &none  &none  &none
-&none  &none           &none           &none           &none           &none             &none  &none  &none  &none  &none  &none
+&none  &Linux_Grave_A  &Linux_Grave_E  &Linux_Grave_I  &Linux_Grave_O  &Linux_Grave_U    &none  &none  &none  &none  &none  &none
 &none  &none           &none           &none           &none           &none             &none  &none  &none  &none  &none  &none
                                        &none           &none           &none             &none  &none  &none
             >;
