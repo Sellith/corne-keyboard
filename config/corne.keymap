@@ -137,16 +137,6 @@
             tapping-term-ms = <200>;
         };
 
-        purplelayer: purplelayer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "PURPLELAYER";
-            bindings = <&mopurple>, <&tog_purple>;
-
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <37 38 36>;
-            tapping-term-ms = <200>;
-        };
-
         c_cedille_: c_cedille_ {
             compatible = "zmk,behavior-mod-morph";
             label = "C_CEDILLE_";
@@ -412,6 +402,51 @@
             compatible = "zmk,behavior-mod-morph";
             label = "COMBI_3_EXP3";
             bindings = <&kp KP_N3>, <&exp3>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Linux_Acute_A: Linux_Acute_A {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LINUX_ACUTE_A";
+            bindings = <&laam>, <&laa>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Linux_Acute_E: Linux_Acute_E {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LINUX_ACUTE_E";
+            bindings = <&leam>, <&lea>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Linux_Acute_I: Linux_Acute_I {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LINUX_ACUTE_I";
+            bindings = <&liam>, <&lia>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Linux_Acute_O: Linux_Acute_O {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LINUX_ACUTE_O";
+            bindings = <&loam>, <&loa>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Linux_Acute_U: Linux_Acute_U {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LINUX_ACUTE_U";
+            bindings = <&luam>, <&lua>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -2009,6 +2044,166 @@
 
             label = "PAGE_END";
         };
+
+        laam: laam {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp E &kp N1 &kp RET>;
+
+            label = "LAAM";
+        };
+
+        laa: laa {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp E &kp N1 &kp RET>;
+
+            label = "LAA";
+        };
+
+        leam: leam {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp E &kp N9 &kp RET>;
+
+            label = "LEAM";
+        };
+
+        lea: lea {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp C &kp N9 &kp RET>;
+
+            label = "LEA";
+        };
+
+        liam: liam {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp E &kp D &kp RET>;
+
+            label = "LIAM";
+        };
+
+        lia: lia {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp C &kp D &kp RET>;
+
+            label = "LIA";
+        };
+
+        loam: loam {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp F &kp N3 &kp RET>;
+
+            label = "LOAM";
+        };
+
+        loa: loa {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp D &kp N3 &kp RET>;
+
+            label = "LOA";
+        };
+
+        luam: luam {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp F &kp A &kp RET>;
+
+            label = "LUAM";
+        };
+
+        lua: lua {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp D &kp A &kp RET>;
+
+            label = "LUA";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -2023,19 +2218,19 @@
 
         lin_base {
             bindings = <
-&kp ESC   &kp W             &kp L                &kp R                 &kp B               &kp Z               &kp SQT               &kp Q               &kp U             &kp D  &kp J  &lrpar
-&kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T               &kp SEMI            &kp G                 &kp A               &kp E             &kp O  &kp I  &lrbkt
-&exction  &kp F             &kp M                &kp V                 &kp C               &kp MINUS           &slbsl                &kp P               &kp X             &kp K  &kp Y  &lrbrc
-                                                 &htkp LSHFT CAPSLOCK  &purplelayer 13 13  &yellowlayer 9 9    &greenlayer 10 ENTER  &cyanlayer 3 SPACE  &orangelayer 1 0
+&kp ESC   &kp W             &kp L                &kp R                 &kp B           &kp Z               &kp SQT               &kp Q               &kp U             &kp D  &kp J  &lrpar
+&kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T           &kp SEMI            &kp G                 &kp A               &kp E             &kp O  &kp I  &lrbkt
+&exction  &kp F             &kp M                &kp V                 &kp C           &kp MINUS           &slbsl                &kp P               &kp X             &kp K  &kp Y  &lrbrc
+                                                 &htkp LSHFT CAPSLOCK  &tog_purple 13  &yellowlayer 9 9    &greenlayer 10 ENTER  &cyanlayer 3 SPACE  &orangelayer 1 0
             >;
         };
 
         lin_lingi_1 {
             bindings = <
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-                     &none  &none  &none    &none  &none  &none
+&none  &Linux_Acute_A  &Linux_Acute_E  &Linux_Acute_I  &Linux_Acute_O  &Linux_Acute_U    &none  &none  &none  &none  &none  &none
+&none  &none           &none           &none           &none           &none             &none  &none  &none  &none  &none  &none
+&none  &none           &none           &none           &none           &none             &none  &none  &none  &none  &none  &none
+                                       &none           &none           &none             &none  &none  &none
             >;
         };
 
@@ -2068,10 +2263,10 @@
 
         win_base {
             bindings = <
-&kp ESC   &kp W             &kp L                &kp R                 &kp B               &kp Z               &kp SQT               &kp Q               &kp U             &kp D  &kp J  &lrpar
-&kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T               &kp SEMI            &kp G                 &kp A               &kp E             &kp O  &kp I  &lrbkt
-&exction  &kp F             &kp M                &kp V                 &kp C               &kp MINUS           &slbsl                &kp P               &kp X             &kp K  &kp Y  &lrbrc
-                                                 &htkp LSHFT CAPSLOCK  &purplelayer 13 13  &yellowlayer 9 9    &greenlayer 10 ENTER  &cyanlayer 8 SPACE  &orangelayer 6 0
+&kp ESC   &kp W             &kp L                &kp R                 &kp B           &kp Z               &kp SQT               &kp Q               &kp U             &kp D  &kp J  &lrpar
+&kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T           &kp SEMI            &kp G                 &kp A               &kp E             &kp O  &kp I  &lrbkt
+&exction  &kp F             &kp M                &kp V                 &kp C           &kp MINUS           &slbsl                &kp P               &kp X             &kp K  &kp Y  &lrbrc
+                                                 &htkp LSHFT CAPSLOCK  &tog_purple 13  &yellowlayer 9 9    &greenlayer 10 ENTER  &cyanlayer 8 SPACE  &orangelayer 6 0
             >;
         };
 
