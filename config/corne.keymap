@@ -496,6 +496,51 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        Linux_Diaeresis_A: Linux_Diaeresis_A {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LINUX_DIAERESIS_A";
+            bindings = <&ladm>, <&lad>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Linux_Diaeresis_E: Linux_Diaeresis_E {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LINUX_DIAERESIS_E";
+            bindings = <&ledm>, <&led>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Linux_Diaeresis_I: Linux_Diaeresis_I {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LINUX_DIAERESIS_I";
+            bindings = <&lidm>, <&lid>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Linux_Diaeresis_O: Linux_Diaeresis_O {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LINUX_DIAERESIS_O";
+            bindings = <&lodm>, <&lod>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Linux_Diaeresis_U: Linux_Diaeresis_U {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LINUX_DIAERESIS_U";
+            bindings = <&ludm>, <&lud>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -2409,6 +2454,166 @@
 
             label = "LUG";
         };
+
+        ladm: ladm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp E &kp N4 &kp RET>;
+
+            label = "LADM";
+        };
+
+        lad: lad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp C &kp N4 &kp RET>;
+
+            label = "LAD";
+        };
+
+        ledm: ledm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp E &kp B &kp RET>;
+
+            label = "LEDM";
+        };
+
+        led: led {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp C &kp B &kp RET>;
+
+            label = "LED";
+        };
+
+        lidm: lidm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp E &kp F &kp RET>;
+
+            label = "LIDM";
+        };
+
+        lid: lid {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp C &kp F &kp RET>;
+
+            label = "LID";
+        };
+
+        lodm: lodm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp F &kp N6 &kp RET>;
+
+            label = "LODM";
+        };
+
+        lod: lod {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp D &kp N6 &kp RET>;
+
+            label = "LOD";
+        };
+
+        ludm: ludm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp F &kp C &kp RET>;
+
+            label = "LUDM";
+        };
+
+        lud: lud {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp RSHFT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp D &kp C &kp RET>;
+
+            label = "LUD";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -2432,10 +2637,10 @@
 
         lin_lingi_1 {
             bindings = <
-&none  &Linux_Acute_A  &Linux_Acute_E  &Linux_Acute_I  &Linux_Acute_O  &Linux_Acute_U    &none  &none  &none  &none  &none  &none
-&none  &Linux_Grave_A  &Linux_Grave_E  &Linux_Grave_I  &Linux_Grave_O  &Linux_Grave_U    &none  &none  &none  &none  &none  &none
-&none  &none           &none           &none           &none           &none             &none  &none  &none  &none  &none  &none
-                                       &none           &none           &none             &none  &none  &none
+&none  &Linux_Acute_A      &Linux_Acute_E      &Linux_Acute_I      &Linux_Acute_O      &Linux_Acute_U        &none  &none  &none  &none  &none  &none
+&none  &Linux_Grave_A      &Linux_Grave_E      &Linux_Grave_I      &Linux_Grave_O      &Linux_Grave_U        &none  &none  &none  &none  &none  &none
+&none  &Linux_Diaeresis_A  &Linux_Diaeresis_E  &Linux_Diaeresis_I  &Linux_Diaeresis_O  &Linux_Diaeresis_U    &none  &none  &none  &none  &none  &none
+                                               &none               &none               &none                 &none  &none  &none
             >;
         };
 
