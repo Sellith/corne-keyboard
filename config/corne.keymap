@@ -389,6 +389,33 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        Combi_1_exp1: Combi_1_exp1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMBI_1_EXP1";
+            bindings = <&kp KP_N1>, <&exp1>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        Combi_2_exp2: Combi_2_exp2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMBI_2_EXP2";
+            bindings = <&kp KP_N2>, <&exp2>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        combi_3_exp3: combi_3_exp3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMBI_3_EXP3";
+            bindings = <&kp KP_N3>, <&exp3>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -1838,6 +1865,48 @@
             bindings = <&kp PIPE &kp PIPE>;
             label = "DUBPIPES";
         };
+
+        exp1: exp1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N8 &kp N5>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "EXP1";
+        };
+
+        exp2: exp2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N7 &kp N8>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "EXP2";
+        };
+
+        exp3: exp3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N7 &kp N9>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "EXP3";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -1888,10 +1957,10 @@
 
         win_Numeric {
             bindings = <
-&kp LGUI   &kp F1  &kp F2   &kp F3   &kp F4   &none             &trans     &trans  &trans  &trans  &kp PLUS     &kp MINUS
-&kp LALT   &kp F5  &kp F6   &kp F7   &kp F8   &none             &trans     &trans  &trans  &trans  &kp ASTRK    &kp FSLH
-&kp LCTRL  &kp F9  &kp F10  &kp F11  &kp F12  &none             &trans     &trans  &trans  &trans  &kp PERCENT  &trans
-                            &none    &none    &release_tog 4    &kp LSHFT  &trans  &trans
+&kp LGUI   &kp F1  &kp F2   &kp F3   &kp F4   &none             &kp KP_NUMBER_0   &Combi_1_exp1  &Combi_2_exp2  &combi_3_exp3  &kp PLUS     &kp MINUS
+&kp LALT   &kp F5  &kp F6   &kp F7   &kp F8   &none             &kp LESS_THAN     &kp KP_N4      &kp KP_N5      &kp KP_N6      &kp ASTRK    &kp FSLH
+&kp LCTRL  &kp F9  &kp F10  &kp F11  &kp F12  &none             &kp GREATER_THAN  &kp KP_N7      &kp KP_N8      &kp KP_N9      &kp PERCENT  &trans
+                            &none    &none    &release_tog 4    &kp LSHFT         &kp KP_EQUAL   &trans
             >;
         };
 
