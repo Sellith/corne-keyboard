@@ -1907,6 +1907,108 @@
 
             label = "EXP3";
         };
+
+        selall: selall {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp A>,
+                <&macro_release>,
+                <&kp LCTRL>;
+
+            label = "SELALL";
+        };
+
+        del_word: del_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp DEL>,
+                <&macro_release>,
+                <&kp LCTRL>;
+
+            label = "DEL_WORD";
+        };
+
+        bspc_word: bspc_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp BSPC>,
+                <&macro_release>,
+                <&kp LCTRL>;
+
+            label = "BSPC_WORD";
+        };
+
+        Del_line: Del_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp HOME>,
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp DOWN>,
+                <&macro_release>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp BSPC>;
+
+            label = "DEL_LINE";
+        };
+
+        perma_del: perma_del {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp DEL>,
+                <&macro_press>,
+                <&kp LSHFT>;
+
+            label = "PERMA_DEL";
+        };
+
+        page_home: page_home {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp HOME>,
+                <&macro_release>,
+                <&kp LCTRL>;
+
+            label = "PAGE_HOME";
+        };
+
+        page_end: page_end {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp END>,
+                <&macro_release>,
+                <&kp LCTRL>;
+
+            label = "PAGE_END";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -1966,10 +2068,10 @@
 
         Edition {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&none  &kp TAB    &kp K_UNDO     &kp UP    &kp K_AGAIN  &kp C_AC_SAVE    &kp BSPC  &bspc_word  &kp DEL     &del_word    &Del_line  &perma_del
+&none  &kp END    &kp LEFT       &kp DOWN  &kp RIGHT    &kp HOME         &trans    &kp K_CUT   &kp K_COPY  &kp K_PASTE  &trans     &trans
+&none  &page_end  &kp PAGE_DOWN  &selall   &kp PAGE_UP  &page_home       &trans    &trans      &trans      &trans       &trans     &trans
+                                 &trans    &kp LCTRL    &kp LSHFT        &trans    &trans      &trans
             >;
         };
 
