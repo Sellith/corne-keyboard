@@ -2608,9 +2608,11 @@
                 <&macro_tap>,
                 <&kp U>,
                 <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
+                <&kp RSHFT &kp LCTRL>,
                 <&macro_tap>,
-                <&kp N0 &kp N0 &kp D &kp C &kp RET>;
+                <&kp N0 &kp N0 &kp D &kp C>,
+                <&macro_tap>,
+                <&kp RET>;
 
             label = "LUD";
         };
