@@ -3163,6 +3163,246 @@
 
             label = "LOS";
         };
+
+        lalpham: lalpham {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp RSHFT &kp LCTRL>,
+                <&macro_tap>,
+                <&kp N0 &kp N3 &kp B &kp N1 &kp RET>;
+
+            label = "LALPHAM";
+        };
+
+        lbetam: lbetam {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp RSHFT &kp LCTRL>,
+                <&macro_tap>,
+                <&kp N0 &kp N3 &kp B &kp NUMBER_2 &kp RET>;
+
+            label = "LBETAM";
+        };
+
+        lgammam: lgammam {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp RSHFT &kp LCTRL>,
+                <&macro_tap>,
+                <&kp N0 &kp N3 &kp B &kp NUMBER_3 &kp RET>;
+
+            label = "LGAMMAM";
+        };
+
+        lepsilonm: lepsilonm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp RSHFT &kp LCTRL>,
+                <&macro_tap>,
+                <&kp N0 &kp N3 &kp B &kp N5 &kp RET>;
+
+            label = "LEPSILONM";
+        };
+
+        lzetam: lzetam {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp RSHFT &kp LCTRL>,
+                <&macro_tap>,
+                <&kp N0 &kp N3 &kp B &kp NUMBER_6 &kp RET>;
+
+            label = "LZETAM";
+        };
+
+        lthetam: lthetam {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp RSHFT &kp LCTRL>,
+                <&macro_tap>,
+                <&kp N0 &kp N3 &kp B &kp N8 &kp RET>;
+
+            label = "LTHETAM";
+        };
+
+        lmum: lmum {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp RSHFT &kp LCTRL>,
+                <&macro_tap>,
+                <&kp N0 &kp N3 &kp B &kp C &kp RET>;
+
+            label = "LMUM";
+        };
+
+        lpim: lpim {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp RSHFT &kp LCTRL>,
+                <&macro_tap>,
+                <&kp N0 &kp N3 &kp C &kp N0 &kp RET>;
+
+            label = "LPIM";
+        };
+
+        lphim: lphim {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp RSHFT &kp LCTRL>,
+                <&macro_tap>,
+                <&kp N0 &kp N3 &kp C &kp NUMBER_6 &kp RET>;
+
+            label = "LPHIM";
+        };
+
+        lpsim: lpsim {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp RSHFT &kp LCTRL>,
+                <&macro_tap>,
+                <&kp N0 &kp N3 &kp C &kp N8 &kp RET>;
+
+            label = "LPSIM";
+        };
+
+        lomegam: lomegam {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp RSHFT &kp LCTRL>,
+                <&macro_tap>,
+                <&kp N0 &kp N3 &kp C &kp N9 &kp RET>;
+
+            label = "LOMEGAM";
+        };
+
+        ldelta: ldelta {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp RSHFT &kp LCTRL>,
+                <&macro_tap>,
+                <&kp N0 &kp N3 &kp N9 &kp N4 &kp RET>;
+
+            label = "LDELTA";
+        };
+
+        lsigma: lsigma {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp RSHFT &kp LCTRL>,
+                <&macro_tap>,
+                <&kp N0 &kp N3 &kp N9 &kp B &kp RET>;
+
+            label = "LSIGMA";
+        };
+
+        lomega: lomega {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp RSHFT &kp LCTRL>,
+                <&macro_tap>,
+                <&kp N0 &kp N3 &kp A &kp N9 &kp RET>;
+
+            label = "LOMEGA";
+        };
+
+        llambdam: llambdam {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp RSHFT &kp LCTRL>,
+                <&macro_tap>,
+                <&kp N0 &kp N3 &kp B &kp B &kp RET>;
+
+            label = "LLAMBDAM";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -3195,10 +3435,10 @@
 
         lin_lingi_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &lalpham  &lbetam   &lgammam   &ldelta   &lepsilonm  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &lzetam   &lthetam  &llambdam  &lmum     &lpim       &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &lsigma   &lphim    &lpsim     &lomegam  &lomega     &trans
+                        &trans  &trans  &trans    &trans    &trans    &trans
             >;
         };
 
