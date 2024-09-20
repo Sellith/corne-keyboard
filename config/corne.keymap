@@ -3085,6 +3085,41 @@
             bindings = <&kp LG(A)>;
             label = "APPLICATION_BROWSER";
         };
+
+        winmax: winmax {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(UP)>;
+            label = "WINMAX";
+        };
+
+        winmin: winmin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(DOWN)>;
+            label = "WINMIN";
+        };
+
+        allwinmin: allwinmin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(D)>;
+            label = "ALLWINMIN";
+        };
+
+        winright: winright {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(RIGHT)>;
+            label = "WINRIGHT";
+        };
+
+        winleft: winleft {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LEFT)>;
+            label = "WINLEFT";
+        };
     };
 
     combos {
@@ -3254,10 +3289,10 @@
 
         window_manager {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&none  &none  &none  &none  &none  &none    &none  &kp C_AL_PREV_TASK  &winmax     &kp C_AL_NEXT_TASK  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &winleft            &winmin     &winright           &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none               &allwinmin  &none               &none  &none
+                     &none  &none  &none    &none  &none               &none
             >;
         };
 
