@@ -2153,1254 +2153,553 @@
         selall: selall {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp A>,
-                <&macro_release>,
-                <&kp LCTRL>;
-
+            bindings = <&kp LC(A)>;
             label = "SELALL";
         };
 
         del_word: del_word {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp DEL>,
-                <&macro_release>,
-                <&kp LCTRL>;
-
+            bindings = <&kp LC(DEL)>;
             label = "DEL_WORD";
         };
 
         bspc_word: bspc_word {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp BSPC>,
-                <&macro_release>,
-                <&kp LCTRL>;
-
+            bindings = <&kp LC(BSPC)>;
             label = "BSPC_WORD";
         };
 
         Del_line: Del_line {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp HOME>,
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp DOWN>,
-                <&macro_release>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp BSPC>;
-
+            bindings = <&kp HOME &kp LS(DOWN) &kp BSPC>;
             label = "DEL_LINE";
         };
 
         perma_del: perma_del {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp DEL>,
-                <&macro_press>,
-                <&kp LSHFT>;
-
+            bindings = <&kp LS(DEL)>;
             label = "PERMA_DEL";
         };
 
         page_home: page_home {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp HOME>,
-                <&macro_release>,
-                <&kp LCTRL>;
-
+            bindings = <&kp LC(HOME)>;
             label = "PAGE_HOME";
         };
 
         page_end: page_end {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp END>,
-                <&macro_release>,
-                <&kp LCTRL>;
-
+            bindings = <&kp LC(END)>;
             label = "PAGE_END";
         };
 
         laam: laam {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp E &kp N1 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N1 &kp RET>;
             label = "LAAM";
         };
 
         laa: laa {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp E &kp N1 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N1 &kp RET>;
             label = "LAA";
         };
 
         leam: leam {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp E &kp N9 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N9 &kp RET>;
             label = "LEAM";
         };
 
         lea: lea {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp C &kp N9 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp N9 &kp RET>;
             label = "LEA";
         };
 
         liam: liam {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp E &kp D &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp D &kp RET>;
             label = "LIAM";
         };
 
         lia: lia {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp C &kp D &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp D &kp RET>;
             label = "LIA";
         };
 
         loam: loam {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp F &kp N3 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp N3 &kp RET>;
             label = "LOAM";
         };
 
         loa: loa {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp D &kp N3 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp N3 &kp RET>;
             label = "LOA";
         };
 
         luam: luam {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp F &kp A &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp A &kp RET>;
             label = "LUAM";
         };
 
         lua: lua {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp D &kp A &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp A &kp RET>;
             label = "LUA";
         };
 
         lagm: lagm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp E &kp N0 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N0 &kp RET>;
             label = "LAGM";
         };
 
         lag: lag {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp C &kp N0 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp N0 &kp RET>;
             label = "LAG";
         };
 
         legm: legm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp E &kp N8 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N8 &kp RET>;
             label = "LEGM";
         };
 
         leg: leg {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp C &kp N8 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp N8 &kp RET>;
             label = "LEG";
         };
 
         ligm: ligm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp E &kp C &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp C &kp RET>;
             label = "LIGM";
         };
 
         lig: lig {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp C &kp C &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp C &kp RET>;
             label = "LIG";
         };
 
         logm: logm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp F &kp N2 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp N2 &kp RET>;
             label = "LOGM";
         };
 
         log: log {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp D &kp N2 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp N2 &kp RET>;
             label = "LOG";
         };
 
         lugm: lugm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp F &kp N9 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp N9 &kp RET>;
             label = "LUGM";
         };
 
         lug: lug {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp D &kp N9 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp N9 &kp RET>;
             label = "LUG";
         };
 
         ladm: ladm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp E &kp N4 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N4 &kp RET>;
             label = "LADM";
         };
 
         lad: lad {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp C &kp N4 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp N4 &kp RET>;
             label = "LAD";
         };
 
         ledm: ledm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp E &kp B &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp B &kp RET>;
             label = "LEDM";
         };
 
         led: led {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp C &kp B &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp B &kp RET>;
             label = "LED";
         };
 
         lidm: lidm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp E &kp F &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp F &kp RET>;
             label = "LIDM";
         };
 
         lid: lid {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp C &kp F &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp F &kp RET>;
             label = "LID";
         };
 
         lodm: lodm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp F &kp N6 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp N6 &kp RET>;
             label = "LODM";
         };
 
         lod: lod {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp D &kp N6 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp N6 &kp RET>;
             label = "LOD";
         };
 
         ludm: ludm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LCTRL &kp RSHFT>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp F &kp C &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp C &kp RET>;
             label = "LUDM";
         };
 
         lud: lud {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp D &kp C &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp C &kp RET>;
             label = "LUD";
         };
 
         lacm: lacm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp E &kp N2 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N2 &kp RET>;
             label = "LACM";
         };
 
         lac: lac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp C &kp N2 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp N2 &kp RET>;
             label = "LAC";
         };
 
         lecm: lecm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp E &kp A &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp A &kp RET>;
             label = "LECM";
         };
 
         lec: lec {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp C &kp A &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp A &kp RET>;
             label = "LEC";
         };
 
         licm: licm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp E &kp E &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp E &kp RET>;
             label = "LICM";
         };
 
         lic: lic {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp C &kp E &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp E &kp RET>;
             label = "LIC";
         };
 
         locm: locm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp F &kp N4 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp N4 &kp RET>;
             label = "LOCM";
         };
 
         loc: loc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp D &kp N4 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp N4 &kp RET>;
             label = "LOC";
         };
 
         lucm: lucm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp F &kp B &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp B &kp RET>;
             label = "LUCM";
         };
 
         luc: luc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp D &kp B &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp B &kp RET>;
             label = "LUC";
         };
 
         latm: latm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp E &kp N3 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N3 &kp RET>;
             label = "LATM";
         };
 
         lat: lat {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp C &kp N3 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp N3 &kp RET>;
             label = "LAT";
         };
 
         lotm: lotm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp F &kp N5 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp N5 &kp RET>;
             label = "LOTM";
         };
 
         lot: lot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp D &kp N5 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp N5 &kp RET>;
             label = "LOT";
         };
 
         lntm: lntm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp F &kp N1 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp N1 &kp RET>;
             label = "LNTM";
         };
 
         lnt: lnt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp D &kp N1 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp N1 &kp RET>;
             label = "LNT";
         };
 
         laem: laem {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp E &kp N6 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N6 &kp RET>;
             label = "LAEM";
         };
 
         lae: lae {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp C &kp N6 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp N6 &kp RET>;
             label = "LAE";
         };
 
         loem: loem {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N1 &kp N5 &kp N3 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N1 &kp N5 &kp N3 &kp RET>;
             label = "LOEM";
         };
 
         loe: loe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N1 &kp N5 &kp NUMBER_2 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N1 &kp N5 &kp NUMBER_2 &kp RET>;
             label = "LOE";
         };
 
         lcedillem: lcedillem {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp E &kp N7 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N7 &kp RET>;
             label = "LCEDILLEM";
         };
 
         lcedille: lcedille {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp C &kp N7 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp N7 &kp RET>;
             label = "LCEDILLE";
         };
 
         lss: lss {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp D &kp F &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp F &kp RET>;
             label = "LSS";
         };
 
         larm: larm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp E &kp N5 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N5 &kp RET>;
             label = "LARM";
         };
 
         lar: lar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp C &kp N5 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp N5 &kp RET>;
             label = "LAR";
         };
 
         losm: losm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp F &kp N8 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp N8 &kp RET>;
             label = "LOSM";
         };
 
         los: los {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp D &kp N8 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp N8 &kp RET>;
             label = "LOS";
         };
 
         lalpham: lalpham {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N3 &kp B &kp N1 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N3 &kp B &kp N1 &kp RET>;
             label = "LALPHAM";
         };
 
         lbetam: lbetam {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N3 &kp B &kp NUMBER_2 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N3 &kp B &kp NUMBER_2 &kp RET>;
             label = "LBETAM";
         };
 
         lgammam: lgammam {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N3 &kp B &kp NUMBER_3 &kp RET>;
-
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N3 &kp B &kp NUMBER_3 &kp RET>;
             label = "LGAMMAM";
         };
 
         lepsilonm: lepsilonm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N3 &kp B &kp N5 &kp RET>;
-
+            bindings = <&kp LS(LC(U)) &kp N0 &kp N3 &kp B &kp N5 &kp RET>;
             label = "LEPSILONM";
         };
 
         lzetam: lzetam {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N3 &kp B &kp NUMBER_6 &kp RET>;
-
+            bindings = <&kp LS(LC(U)) &kp N0 &kp N3 &kp B &kp NUMBER_6 &kp RET>;
             label = "LZETAM";
         };
 
         lthetam: lthetam {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N3 &kp B &kp N8 &kp RET>;
-
+            bindings = <&kp LS(LC(U)) &kp N0 &kp N3 &kp B &kp N8 &kp RET>;
             label = "LTHETAM";
         };
 
         lmum: lmum {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N3 &kp B &kp C &kp RET>;
-
+            bindings = <&kp LS(LC(U)) &kp N0 &kp N3 &kp B &kp C &kp RET>;
             label = "LMUM";
         };
 
         lpim: lpim {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N3 &kp C &kp N0 &kp RET>;
-
+            bindings = <&kp LS(LC(U)) &kp N0 &kp N3 &kp C &kp N0 &kp RET>;
             label = "LPIM";
         };
 
         lphim: lphim {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N3 &kp C &kp NUMBER_6 &kp RET>;
-
+            bindings = <&kp LS(LC(U)) &kp N0 &kp N3 &kp C &kp NUMBER_6 &kp RET>;
             label = "LPHIM";
         };
 
         lpsim: lpsim {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N3 &kp C &kp N8 &kp RET>;
-
+            bindings = <&kp LS(LC(U)) &kp N0 &kp N3 &kp C &kp N8 &kp RET>;
             label = "LPSIM";
         };
 
         lomegam: lomegam {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N3 &kp C &kp N9 &kp RET>;
-
+            bindings = <&kp LS(LC(U)) &kp N0 &kp N3 &kp C &kp N9 &kp RET>;
             label = "LOMEGAM";
         };
 
         ldelta: ldelta {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N3 &kp N9 &kp N4 &kp RET>;
-
+            bindings = <&kp LS(LC(U)) &kp N0 &kp N3 &kp N9 &kp N4 &kp RET>;
             label = "LDELTA";
         };
 
         lsigma: lsigma {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N3 &kp N9 &kp B &kp RET>;
-
+            bindings = <&kp LS(LC(U)) &kp N0 &kp N3 &kp N9 &kp B &kp RET>;
             label = "LSIGMA";
         };
 
         lomega: lomega {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N3 &kp A &kp N9 &kp RET>;
-
+            bindings = <&kp LS(LC(U)) &kp N0 &kp N3 &kp A &kp N9 &kp RET>;
             label = "LOMEGA";
         };
 
         llambdam: llambdam {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp RSHFT &kp LCTRL>,
-                <&macro_tap>,
-                <&kp N0 &kp N3 &kp B &kp B &kp RET>;
-
+            bindings = <&kp LS(LC(U)) &kp N0 &kp N3 &kp B &kp B &kp RET>;
             label = "LLAMBDAM";
         };
 
