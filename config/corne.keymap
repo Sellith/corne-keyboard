@@ -3078,6 +3078,13 @@
             bindings = <&kp LC(LEFT)>;
             label = "PREV_WORD";
         };
+
+        Application_browser: Application_browser {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(A)>;
+            label = "APPLICATION_BROWSER";
+        };
     };
 
     combos {
@@ -3094,6 +3101,12 @@
             key-positions = <38 16 15 14>;
             layers = <0 1 2 3 4>;
         };
+
+        gaming_release {
+            bindings = <&tog 11>;
+            key-positions = <38 12 4>;
+            layers = <11>;
+        };
     };
 };
 
@@ -3109,7 +3122,7 @@
 &kp ESC   &kp W             &kp L                &kp R                 &kp B           &kp Z               &kp SQT               &kp Q               &kp U             &kp D  &kp J  &lrpar
 &kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T           &kp SEMI            &kp G                 &kp A               &kp E             &kp O  &kp I  &lrbkt
 &exction  &kp F             &kp M                &kp V                 &kp C           &kp MINUS           &slbsl                &kp P               &kp X             &kp K  &kp Y  &lrbrc
-                                                 &htkp LSHFT CAPSLOCK  &tog_purple 13  &yellowlayer 4 4    &greenlayer 10 ENTER  &cyanlayer 3 SPACE  &orangelayer 1 0
+                                                 &htkp LSHFT CAPSLOCK  &tog_purple 11  &yellowlayer 4 4    &greenlayer 10 ENTER  &cyanlayer 3 SPACE  &orangelayer 1 0
             >;
         };
 
@@ -3154,7 +3167,7 @@
 &kp ESC   &kp W             &kp L                &kp R                 &kp B           &kp Z               &kp SQT               &kp Q               &kp U             &kp D  &kp J  &lrpar
 &kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T           &kp SEMI            &kp G                 &kp A               &kp E             &kp O  &kp I  &lrbkt
 &exction  &kp F             &kp M                &kp V                 &kp C           &kp MINUS           &slbsl                &kp P               &kp X             &kp K  &kp Y  &lrbrc
-                                                 &htkp LSHFT CAPSLOCK  &tog_purple 13  &yellowlayer 9 9    &greenlayer 10 ENTER  &cyanlayer 8 SPACE  &orangelayer 6 0
+                                                 &htkp LSHFT CAPSLOCK  &tog_purple 11  &yellowlayer 9 9    &greenlayer 10 ENTER  &cyanlayer 8 SPACE  &orangelayer 6 0
             >;
         };
 
@@ -3199,47 +3212,47 @@
 &kp TAB        &kp K_UNDO  &prev_word     &kp UP    &next_word   &kp K_REDO    &none  &none      &none       &Del_line    &perma_del  &none
 &kp C_AC_SAVE  &kp END     &kp LEFT       &kp DOWN  &kp RIGHT    &kp HOME      &none  &kp BSPC   &bspc_word  &kp DEL      &del_word   &none
 &none          &page_end   &kp PAGE_DOWN  &selall   &kp PAGE_UP  &page_home    &none  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &none       &none
-                                          &none     &none        &kp LSHFT     &none  &none      &none
-            >;
-        };
-
-        lin_ {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        lin {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+                                          &none     &kp C_MENU   &kp LSHFT     &none  &none      &none
             >;
         };
 
         Gaming {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&kp ESC  &kp T         &kp Q  &kp W   &kp E      &kp R        &none  &none  &none  &none  &none  &none
+&kp TAB  &htkp LALT I  &kp A  &kp S   &kp D      &kp F        &none  &none  &none  &none  &none  &none
+&kp O    &kp LSHFT     &kp Z  &kp X   &kp C      &kp V        &none  &none  &none  &none  &none  &none
+                              &mo 12  &kp LCTRL  &kp SPACE    &none  &none  &none
             >;
         };
 
-        layer_7 {
+        Gaming_num {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&kp F1  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5     &none  &none  &none  &none  &none  &none
+&kp F2  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0     &none  &none  &none  &none  &none  &none
+&kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8     &none  &none  &none  &none  &none  &none
+                        &none   &kp F9  &kp F11    &none  &none  &none
             >;
         };
 
-        layer_8 {
+        Applaunch {
+            bindings = <
+&none  &none  &none  &none  &none  &none    &kp C_AL_MOVIES       &kp C_AL_AUDIO            &kp C_AL_IMAGES         &kp C_AL_CAL  &kp C_AL_MAIL             &none
+&none  &none  &none  &none  &none  &none    &kp C_AL_MY_COMPUTER  &kp C_AL_TEXT_EDITOR      &kp C_AL_FILES          &kp C_AL_WWW  &none                     &none
+&none  &none  &none  &none  &none  &none    &kp C_AL_CALC         &kp C_AL_GRAPHICS_EDITOR  &kp C_AL_CONTROL_PANEL  &kp C_AL_DB   &kp C_AL_KEYBOARD_LAYOUT  &none
+                     &none  &none  &none    &Application_browser  &none                     &none
+            >;
+        };
+
+        media_display {
+            bindings = <
+&none  &none          &none         &none         &none          &none             &none  &kp C_VOL_DN      &kp C_VOLUME_UP    &kp C_MUTE  &none  &none
+&none  &kp C_BRI_MIN  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_BRI_MAX  &kp C_BRI_AUTO    &none  &kp C_PLAY_PAUSE  &kp C_PREV         &kp C_NEXT  &none  &none
+&none  &none          &none         &none         &none          &none             &none  &kp C_REPEAT      &kp C_RANDOM_PLAY  &kp C_STOP  &none  &none
+                                    &none         &none          &none             &none  &none             &none
+            >;
+        };
+
+        window_manager {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
