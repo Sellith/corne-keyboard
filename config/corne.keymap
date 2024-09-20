@@ -3403,6 +3403,13 @@
 
             label = "LLAMBDAM";
         };
+
+        lpound: lpound {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(U)) &kp N0 &kp N0 &kp A &kp N3 &kp RET>;
+            label = "LPOUND";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
