@@ -3121,6 +3121,25 @@
             bindings = <&kp LG(LEFT)>;
             label = "WINLEFT";
         };
+
+        mo_layer: layer_windowman {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_param_2to2>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB_CMD MACRO_PLACEHOLDER &macro_param_1to1>,
+                <&macro_press>,
+                <&mo MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1>,
+                <&macro_release>,
+                <&mo MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&rgb_ug RGB_EFR>;
+
+            label = "LAYER_WINDOWMAN";
+        };
     };
 
     combos {
@@ -3139,9 +3158,39 @@
         };
 
         gaming_release {
-            bindings = <&tog 11>;
+            bindings = <&release_tog 11>;
             key-positions = <38 12 4>;
             layers = <11>;
+        };
+
+        soft_off {
+            bindings = <&soft_off>;
+            key-positions = <0 11>;
+        };
+
+        applaunch {
+            bindings = <&mo_layer RGB_COLOR_HSB_VAL(0,100,49) 13>;
+            key-positions = <38 24>;
+        };
+
+        mediadisp {
+            bindings = <&mo_layer RGB_COLOR_HSB_VAL(90,100,49) 14>;
+            key-positions = <24 37>;
+        };
+
+        windowman {
+            bindings = <&mo_layer RGB_COLOR_HSB_VAL(158,100,49) 15>;
+            key-positions = <38 25>;
+        };
+
+        cc {
+            bindings = <&mo_layer RGB_COLOR_HSB_VAL(212,100,49) 16>;
+            key-positions = <37 40>;
+        };
+
+        kc {
+            bindings = <&mo_layer RGB_COLOR_HSB_VAL(313,100,49) 17>;
+            key-positions = <38 39>;
         };
     };
 };
