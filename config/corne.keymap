@@ -784,10 +784,11 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(123,100,49) &macro_param_1to1>,
+                <&macro_param_1to1>,
                 <&macro_press>,
                 <&mo MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(123,100,49)>,
                 <&macro_pause_for_release>,
                 <&macro_param_1to1>,
                 <&macro_release>,
@@ -802,10 +803,11 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_press>,
-                <&rgb_ug RGB_COLOR_HSB(24,100,49) &macro_param_1to1>,
+                <&macro_param_1to1>,
                 <&macro_press>,
                 <&mo MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(24,100,49)>,
                 <&macro_press>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
@@ -820,11 +822,11 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_press>,
-                <&rgb_ug RGB_COLOR_HSB(180,100,49) &macro_param_1to1>,
+                <&macro_param_1to1>,
                 <&macro_press>,
                 <&mo MACRO_PLACEHOLDER>,
-                <&macro_press>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(180,100,49)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
@@ -875,10 +877,11 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(267,100,49) &macro_param_1to1>,
+                <&macro_param_1to1>,
                 <&macro_press>,
                 <&mo MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(267,100,49)>,
                 <&macro_pause_for_release>,
                 <&macro_param_1to1>,
                 <&macro_release>,
@@ -893,10 +896,11 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(63,100,49) &macro_param_1to1>,
+                <&macro_param_1to1>,
                 <&macro_press>,
                 <&mo MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(63,100,49)>,
                 <&macro_pause_for_release>,
                 <&macro_param_1to1>,
                 <&macro_release>,
@@ -1681,10 +1685,11 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_press>,
-                <&rgb_ug RGB_COLOR_HSB(38,100,70) &macro_param_1to1>,
+                <&macro_param_1to1>,
                 <&macro_press>,
                 <&mo MACRO_PLACEHOLDER>,
+                <&macro_press>,
+                <&rgb_ug RGB_COLOR_HSB(38,100,70)>,
                 <&macro_press>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
@@ -3127,11 +3132,11 @@
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings =
-                <&macro_param_2to2>,
-                <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB_CMD MACRO_PLACEHOLDER &macro_param_1to1>,
+                <&macro_param_1to1>,
                 <&macro_press>,
-                <&mo MACRO_PLACEHOLDER>,
+                <&mo MACRO_PLACEHOLDER &macro_param_2to2>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB_CMD MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_param_1to1>,
                 <&macro_release>,
@@ -3150,23 +3155,27 @@
             bindings = <&to 0>;
             key-positions = <38 16 14 15>;
             layers = <5 6 7 8 9>;
+            timeout-ms = <200>;
         };
 
         windows_keyboard {
             bindings = <&to 5>;
             key-positions = <38 16 15 14>;
             layers = <0 1 2 3 4>;
+            timeout-ms = <200>;
         };
 
         gaming_release {
             bindings = <&release_tog 11>;
             key-positions = <38 12 4>;
             layers = <11>;
+            timeout-ms = <200>;
         };
 
         soft_off {
             bindings = <&soft_off>;
             key-positions = <0 11>;
+            timeout-ms = <500>;
         };
 
         applaunch {
@@ -3177,21 +3186,25 @@
         mediadisp {
             bindings = <&mo_layer RGB_COLOR_HSB_VAL(90,100,49) 14>;
             key-positions = <24 37>;
+            timeout-ms = <200>;
         };
 
         windowman {
             bindings = <&mo_layer RGB_COLOR_HSB_VAL(158,100,49) 15>;
             key-positions = <38 25>;
+            timeout-ms = <200>;
         };
 
         cc {
             bindings = <&mo_layer RGB_COLOR_HSB_VAL(212,100,49) 16>;
             key-positions = <37 40>;
+            timeout-ms = <200>;
         };
 
         kc {
             bindings = <&mo_layer RGB_COLOR_HSB_VAL(313,100,49) 17>;
             key-positions = <38 39>;
+            timeout-ms = <200>;
         };
     };
 };
@@ -3205,10 +3218,10 @@
 
         lin_base {
             bindings = <
-&kp ESC   &kp W             &kp L                &kp R                 &kp B           &kp Z               &kp SQT      &kp Q               &kp U             &kp D  &kp J  &lrpar
-&kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T           &kp SEMI            &kp G        &kp A               &kp E             &kp O  &kp I  &lrbkt
-&exction  &kp F             &kp M                &kp V                 &kp C           &kp MINUS           &slbsl       &kp P               &kp X             &kp K  &kp Y  &lrbrc
-                                                 &htkp LSHFT CAPSLOCK  &tog_purple 11  &yellowlayer 4 4    &mogreen 10  &cyanlayer 3 SPACE  &orangelayer 1 0
+&kp ESC   &kp W             &kp L                &kp R                 &kp B           &kp Z               &kp SQT               &kp Q               &kp U             &kp D  &kp J  &lrpar
+&kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T           &kp SEMI            &kp G                 &kp A               &kp E             &kp O  &kp I  &lrbkt
+&exction  &kp F             &kp M                &kp V                 &kp C           &kp MINUS           &slbsl                &kp P               &kp X             &kp K  &kp Y  &lrbrc
+                                                 &htkp LSHFT CAPSLOCK  &tog_purple 11  &yellowlayer 4 4    &greenlayer 10 ENTER  &cyanlayer 3 SPACE  &orangelayer 1 0
             >;
         };
 
