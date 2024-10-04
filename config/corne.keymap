@@ -900,7 +900,7 @@
                 <&macro_pause_for_release>,
                 <&macro_param_1to1>,
                 <&macro_release>,
-                <&kp MACRO_PLACEHOLDER>,
+                <&mo MACRO_PLACEHOLDER>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(304,100,50)>;
 
