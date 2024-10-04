@@ -87,6 +87,7 @@
             #binding-cells = <2>;
             hold-trigger-key-positions = <15 14 13>;
             tapping-term-ms = <200>;
+            flavor = "tap-preferred";
         };
 
         htkp: htkp {
@@ -105,7 +106,7 @@
 
             #binding-cells = <2>;
             hold-trigger-key-positions = <39 40 41>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
         };
 
         orangelayer: orangelayer {
@@ -3204,10 +3205,10 @@
 
         lin_base {
             bindings = <
-&kp ESC   &kp W             &kp L                &kp R                 &kp B           &kp Z               &kp SQT               &kp Q               &kp U             &kp D  &kp J  &lrpar
-&kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T           &kp SEMI            &kp G                 &kp A               &kp E             &kp O  &kp I  &lrbkt
-&exction  &kp F             &kp M                &kp V                 &kp C           &kp MINUS           &slbsl                &kp P               &kp X             &kp K  &kp Y  &lrbrc
-                                                 &htkp LSHFT CAPSLOCK  &tog_purple 11  &yellowlayer 4 4    &greenlayer 10 ENTER  &cyanlayer 3 SPACE  &orangelayer 1 0
+&kp ESC   &kp W             &kp L                &kp R                 &kp B           &kp Z               &kp SQT      &kp Q               &kp U             &kp D  &kp J  &lrpar
+&kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T           &kp SEMI            &kp G        &kp A               &kp E             &kp O  &kp I  &lrbkt
+&exction  &kp F             &kp M                &kp V                 &kp C           &kp MINUS           &slbsl       &kp P               &kp X             &kp K  &kp Y  &lrbrc
+                                                 &htkp LSHFT CAPSLOCK  &tog_purple 11  &yellowlayer 4 4    &mogreen 10  &cyanlayer 3 SPACE  &orangelayer 1 0
             >;
         };
 
