@@ -777,6 +777,42 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        Wwindows: Wwindows {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WWINDOWS";
+            bindings = <&kp W>, <&to 5>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_LALT)>;
+        };
+
+        llinux: llinux {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LLINUX";
+            bindings = <&kp L>, <&to 0>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_LALT)>;
+        };
+
+        toggaming: toggaming {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TOGGAMING";
+            bindings = <&kp G>, <&tog_purple 11>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_LALT)>;
+        };
+
+        kc_cc: kc_cc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "KC_CC";
+            bindings = <&layer_kc>, <&layer_cc>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
     };
 
     macros {
@@ -3128,19 +3164,85 @@
             label = "WINLEFT";
         };
 
-        mo_layer: layer_windowman {
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
+        layer_kc: layer_kc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings =
-                <&macro_param_1to1>,
                 <&macro_press>,
-                <&mo MACRO_PLACEHOLDER &macro_param_2to2>,
+                <&mo 17>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB_CMD MACRO_PLACEHOLDER>,
+                <&rgb_ug RGB_COLOR_HSB(342,100,70)>,
                 <&macro_pause_for_release>,
-                <&macro_param_1to1>,
                 <&macro_release>,
-                <&mo MACRO_PLACEHOLDER>,
+                <&mo 17>,
+                <&macro_tap>,
+                <&rgb_ug RGB_EFR>;
+
+            label = "LAYER_KC";
+        };
+
+        layer_cc: layer_cc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 16>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(218,87,76)>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 16>,
+                <&macro_tap>,
+                <&rgb_ug RGB_EFR>;
+
+            label = "LAYER_CC";
+        };
+
+        layer_mediadisp: layer_mediadisp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 14>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(132,87,76)>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 14>,
+                <&macro_tap>,
+                <&rgb_ug RGB_EFR>;
+
+            label = "LAYER_MEDIADISP";
+        };
+
+        layer_applauch: layer_applauch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 13>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(171,87,76)>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 13>,
+                <&macro_tap>,
+                <&rgb_ug RGB_EFR>;
+
+            label = "LAYER_APPLAUCH";
+        };
+
+        layer_windowman: layer_windowman {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 15>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(65,87,76)>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 15>,
                 <&macro_tap>,
                 <&rgb_ug RGB_EFR>;
 
@@ -3150,20 +3252,6 @@
 
     combos {
         compatible = "zmk,combos";
-
-        linux_keyboard {
-            bindings = <&to 0>;
-            key-positions = <38 16 14 15>;
-            layers = <5 6 7 8 9>;
-            timeout-ms = <200>;
-        };
-
-        windows_keyboard {
-            bindings = <&to 5>;
-            key-positions = <38 16 15 14>;
-            layers = <0 1 2 3 4>;
-            timeout-ms = <200>;
-        };
 
         gaming_release {
             bindings = <&release_tog 11>;
@@ -3179,31 +3267,19 @@
         };
 
         applaunch {
-            bindings = <&mo_layer RGB_COLOR_HSB_VAL(0,100,49) 13>;
-            key-positions = <38 24>;
+            bindings = <&layer_kc RGB_COLOR_HSB_VAL(0,100,49) 13>;
+            key-positions = <25 28>;
         };
 
         mediadisp {
-            bindings = <&mo_layer RGB_COLOR_HSB_VAL(90,100,49) 14>;
-            key-positions = <24 37>;
+            bindings = <&layer_kc RGB_COLOR_HSB_VAL(90,100,49) 14>;
+            key-positions = <28 27>;
             timeout-ms = <200>;
         };
 
         windowman {
-            bindings = <&mo_layer RGB_COLOR_HSB_VAL(158,100,49) 15>;
-            key-positions = <38 25>;
-            timeout-ms = <200>;
-        };
-
-        cc {
-            bindings = <&mo_layer RGB_COLOR_HSB_VAL(212,100,49) 16>;
-            key-positions = <37 40>;
-            timeout-ms = <200>;
-        };
-
-        kc {
-            bindings = <&mo_layer RGB_COLOR_HSB_VAL(313,100,49) 17>;
-            key-positions = <38 39>;
+            bindings = <&layer_kc RGB_COLOR_HSB_VAL(158,100,49) 15>;
+            key-positions = <28 26>;
             timeout-ms = <200>;
         };
     };
@@ -3218,10 +3294,10 @@
 
         lin_base {
             bindings = <
-&kp ESC   &kp W             &kp L                &kp R                 &kp B           &kp Z               &kp SQT               &kp Q               &kp U             &kp D  &kp J  &lrpar
-&kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T           &kp SEMI            &kp G                 &kp A               &kp E             &kp O  &kp I  &lrbkt
-&exction  &kp F             &kp M                &kp V                 &kp C           &kp MINUS           &slbsl                &kp P               &kp X             &kp K  &kp Y  &lrbrc
-                                                 &htkp LSHFT CAPSLOCK  &tog_purple 11  &yellowlayer 4 4    &greenlayer 10 ENTER  &cyanlayer 3 SPACE  &orangelayer 1 0
+&kp ESC   &Wwindows         &kp L                &kp R                 &kp B   &kp Z               &kp SQT               &kp Q               &kp U             &kp D  &kp J  &lrpar
+&kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T   &kp SEMI            &toggaming            &kp A               &kp E             &kp O  &kp I  &lrbkt
+&exction  &kp F             &kp M                &kp V                 &kp C   &kp MINUS           &slbsl                &kp P               &kp X             &kp K  &kp Y  &lrbrc
+                                                 &htkp LSHFT CAPSLOCK  &kc_cc  &yellowlayer 4 4    &greenlayer 10 ENTER  &cyanlayer 3 SPACE  &orangelayer 1 0
             >;
         };
 
@@ -3263,7 +3339,7 @@
 
         win_base {
             bindings = <
-&kp ESC   &kp W             &kp L                &kp R                 &kp B           &kp Z               &kp SQT               &kp Q               &kp U             &kp D  &kp J  &lrpar
+&kp ESC   &kp W             &llinux              &kp R                 &kp B           &kp Z               &kp SQT               &kp Q               &kp U             &kp D  &kp J  &lrpar
 &kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T           &kp SEMI            &kp G                 &kp A               &kp E             &kp O  &kp I  &lrbkt
 &exction  &kp F             &kp M                &kp V                 &kp C           &kp MINUS           &slbsl                &kp P               &kp X             &kp K  &kp Y  &lrbrc
                                                  &htkp LSHFT CAPSLOCK  &tog_purple 11  &yellowlayer 9 9    &greenlayer 10 ENTER  &cyanlayer 8 SPACE  &orangelayer 6 0
