@@ -3267,18 +3267,18 @@
         };
 
         applaunch {
-            bindings = <&layer_kc RGB_COLOR_HSB_VAL(0,100,49) 13>;
+            bindings = <&layer_applauch>;
             key-positions = <25 28>;
         };
 
         mediadisp {
-            bindings = <&layer_kc RGB_COLOR_HSB_VAL(90,100,49) 14>;
+            bindings = <&layer_mediadisp>;
             key-positions = <28 27>;
             timeout-ms = <200>;
         };
 
         windowman {
-            bindings = <&layer_kc RGB_COLOR_HSB_VAL(158,100,49) 15>;
+            bindings = <&layer_windowman>;
             key-positions = <28 26>;
             timeout-ms = <200>;
         };
