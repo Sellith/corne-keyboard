@@ -3294,10 +3294,10 @@
 
         lin_base {
             bindings = <
-&kp ESC   &Wwindows         &kp L                &kp R                 &kp B   &kp Z               &kp SQT               &kp Q               &kp U             &kp D  &kp J  &lrpar
-&kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T   &kp SEMI            &toggaming            &kp A               &kp E             &kp O  &kp I  &lrbkt
-&exction  &kp F             &kp M                &kp V                 &kp C   &kp MINUS           &slbsl                &kp P               &kp X             &kp K  &kp Y  &lrbrc
-                                                 &htkp LSHFT CAPSLOCK  &kc_cc  &yellowlayer 4 4    &greenlayer 10 ENTER  &cyanlayer 3 SPACE  &orangelayer 1 0
+&kp ESC   &Wwindows  &kp L             &kp R                 &kp B                &kp Z               &kp SQT               &kp Q               &kp U             &kp D  &kp J  &lrpar
+&kp TAB   &kp S      &homerow LCTRL H  &homerow LEFT_GUI N   &homerow LEFT_ALT T  &kp SEMI            &toggaming            &kp A               &kp E             &kp O  &kp I  &lrbkt
+&exction  &kp F      &kp M             &kp V                 &kp C                &kp MINUS           &slbsl                &kp P               &kp X             &kp K  &kp Y  &lrbrc
+                                       &htkp LSHFT CAPSLOCK  &kc_cc               &yellowlayer 4 4    &greenlayer 10 ENTER  &cyanlayer 3 SPACE  &orangelayer 1 0
             >;
         };
 
@@ -3339,10 +3339,10 @@
 
         win_base {
             bindings = <
-&kp ESC   &kp W             &llinux              &kp R                 &kp B   &kp Z               &kp SQT               &kp Q               &kp U             &kp D  &kp J  &lrpar
-&kp TAB   &homerow LCTRL S  &homerow LEFT_GUI H  &homerow LEFT_ALT N   &kp T   &kp SEMI            &kp G                 &kp A               &kp E             &kp O  &kp I  &lrbkt
-&exction  &kp F             &kp M                &kp V                 &kp C   &kp MINUS           &slbsl                &kp P               &kp X             &kp K  &kp Y  &lrbrc
-                                                 &htkp LSHFT CAPSLOCK  &kc_cc  &yellowlayer 9 9    &greenlayer 10 ENTER  &cyanlayer 8 SPACE  &orangelayer 6 0
+&kp ESC   &kp W  &llinux           &kp R                 &kp B                &kp Z               &kp SQT               &kp Q               &kp U             &kp D  &kp J  &lrpar
+&kp TAB   &kp S  &homerow LCTRL H  &homerow LEFT_GUI N   &homerow LEFT_ALT T  &kp SEMI            &kp G                 &kp A               &kp E             &kp O  &kp I  &lrbkt
+&exction  &kp F  &kp M             &kp V                 &kp C                &kp MINUS           &slbsl                &kp P               &kp X             &kp K  &kp Y  &lrbrc
+                                   &htkp LSHFT CAPSLOCK  &kc_cc               &yellowlayer 9 9    &greenlayer 10 ENTER  &cyanlayer 8 SPACE  &orangelayer 6 0
             >;
         };
 
