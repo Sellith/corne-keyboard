@@ -3386,7 +3386,7 @@
             bindings = <
 &kp TAB        &kp K_UNDO  &prev_word     &kp UP      &next_word   &kp K_REDO    &none  &none      &none       &Del_line    &perma_del  &none
 &kp C_AC_SAVE  &kp HOME    &kp LEFT       &kp DOWN    &kp RIGHT    &kp END       &none  &kp BSPC   &bspc_word  &kp DEL      &del_word   &none
-&none          &page_end   &kp PAGE_DOWN  &selall     &kp PAGE_UP  &page_home    &none  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &none       &none
+&none          &page_end   &kp PAGE_DOWN  &selall     &kp PAGE_UP  &page_home    &none  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp INS     &none
                                           &kp C_MENU  &kp LCTRL    &kp LSHFT     &none  &none      &none
             >;
         };
