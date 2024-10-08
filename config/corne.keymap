@@ -3248,6 +3248,18 @@
 
             label = "LAYER_WINDOWMAN";
         };
+
+        tog_green: tog_green {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(128,100,49) &macro_param_1to1>,
+                <&macro_tap>,
+                <&tog MACRO_PLACEHOLDER>;
+
+            label = "TOG_GREEN";
+        };
     };
 
     combos {
@@ -3262,7 +3274,7 @@
 
         soft_off {
             bindings = <&soft_off>;
-            key-positions = <0 11>;
+            key-positions = <24 35>;
             timeout-ms = <500>;
         };
 
@@ -3281,6 +3293,11 @@
             bindings = <&layer_windowman>;
             key-positions = <28 26>;
             timeout-ms = <200>;
+        };
+
+        tog_green {
+            bindings = <&tog_green 10>;
+            key-positions = <25 39>;
         };
     };
 };
@@ -3384,10 +3401,10 @@
 
         Edition {
             bindings = <
-&kp TAB        &kp K_UNDO  &prev_word     &kp UP      &next_word   &kp K_REDO    &none  &none      &none       &Del_line    &perma_del  &none
-&kp C_AC_SAVE  &kp HOME    &kp LEFT       &kp DOWN    &kp RIGHT    &kp END       &none  &kp BSPC   &bspc_word  &kp DEL      &del_word   &none
-&none          &page_end   &kp PAGE_DOWN  &selall     &kp PAGE_UP  &page_home    &none  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp INS     &none
-                                          &kp C_MENU  &kp LCTRL    &kp LSHFT     &none  &none      &none
+&kp TAB        &kp K_UNDO  &prev_word  &kp UP      &next_word     &kp K_REDO    &none  &none            &none       &Del_line    &perma_del  &none
+&kp C_AC_SAVE  &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT      &kp END       &none  &kp BSPC         &bspc_word  &kp DEL      &del_word   &none
+&none          &page_home  &kp PG_UP   &selall     &kp PAGE_DOWN  &page_end     &none  &kp K_CUT        &kp K_COPY  &kp K_PASTE  &kp INS     &none
+                                       &kp C_MENU  &kp LCTRL      &kp LSHFT     &none  &release_tog 10  &none
             >;
         };
 
