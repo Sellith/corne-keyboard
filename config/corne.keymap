@@ -799,7 +799,7 @@
         toggaming: toggaming {
             compatible = "zmk,behavior-mod-morph";
             label = "TOGGAMING";
-            bindings = <&kp G>, <&tog_purple 11>;
+            bindings = <&kp G>, <&tog_purple 12>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_LALT)>;
@@ -3178,12 +3178,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 17>,
+                <&mo 18>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(342,100,70)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 17>,
+                <&mo 18>,
                 <&macro_tap>,
                 <&rgb_ug RGB_EFR>;
 
@@ -3195,12 +3195,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 16>,
+                <&mo 17>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(218,87,76)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 16>,
+                <&mo 17>,
                 <&macro_tap>,
                 <&rgb_ug RGB_EFR>;
 
@@ -3212,12 +3212,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 14>,
+                <&mo 15>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(132,87,76)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 14>,
+                <&mo 15>,
                 <&macro_tap>,
                 <&rgb_ug RGB_EFR>;
 
@@ -3229,12 +3229,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 13>,
+                <&mo 14>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(171,87,76)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 13>,
+                <&mo 14>,
                 <&macro_tap>,
                 <&rgb_ug RGB_EFR>;
 
@@ -3246,12 +3246,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 15>,
+                <&mo 16>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(65,87,76)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 15>,
+                <&mo 16>,
                 <&macro_tap>,
                 <&rgb_ug RGB_EFR>;
 
@@ -3275,9 +3275,9 @@
         compatible = "zmk,combos";
 
         gaming_release {
-            bindings = <&release_tog 11>;
+            bindings = <&release_tog 12>;
             key-positions = <38 12 4>;
-            layers = <11>;
+            layers = <12>;
             timeout-ms = <200>;
         };
 
@@ -3305,7 +3305,7 @@
         };
 
         tog_green {
-            bindings = <&tog_green 10>;
+            bindings = <&tog_green 11>;
             key-positions = <25 39>;
         };
     };
@@ -3417,12 +3417,21 @@
             >;
         };
 
+        reader_mode {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans   &trans          &kp UP_ARROW    &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp E    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp A   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans   &kp PAGE_UP     &trans          &kp PAGE_DOWN    &trans  &trans
+                        &trans  &trans  &trans    &tog 11  &kp F11         &trans
+            >;
+        };
+
         Gaming {
             bindings = <
 &kp ESC  &kp T         &kp Q  &kp W   &kp E      &kp R        &none  &none  &none  &none  &none  &none
 &kp TAB  &htkp LALT I  &kp A  &kp S   &kp D      &kp F        &none  &none  &none  &none  &none  &none
 &kp O    &kp LSHFT     &kp Z  &kp X   &kp C      &kp V        &none  &none  &none  &none  &none  &none
-                              &mo 12  &kp LCTRL  &kp SPACE    &none  &none  &none
+                              &mo 13  &kp LCTRL  &kp SPACE    &none  &none  &none
             >;
         };
 
