@@ -3359,7 +3359,7 @@
 &kp LGUI   &kp F1  &kp F2   &kp F3   &kp F4   &none             &Linux_Combo_0exp0       &Linux_Combo_1exp1  &Linux_Combo_2exp2  &Linux_Combo_3exp3  &kp PLUS     &kp MINUS
 &kp LALT   &kp F5  &kp F6   &kp F7   &kp F8   &none             &Linux_Combo_lesslesseq  &Linux_Combo_4exp4  &Linux_Combo_5exp5  &Linux_Combo_6exp6  &kp ASTRK    &kp FSLH
 &kp LCTRL  &kp F9  &kp F10  &kp F11  &kp F12  &none             &Linux_Combo_grgrequal   &Linux_Combo_7exp7  &Linux_Combo_8exp8  &Linux_Combo_9exp9  &kp PERCENT  &none
-                            &none    &none    &release_tog 4    &kp LSHFT                &Linux_Combo_eine   &none
+                            &none    &mo 10   &release_tog 4    &kp LSHFT                &Linux_Combo_eine   &kp SPACE
             >;
         };
 
@@ -3404,16 +3404,16 @@
 &kp LGUI   &kp F1  &kp F2   &kp F3   &kp F4   &none             &kp KP_NUMBER_0   &Combi_1_exp1  &Combi_2_exp2  &combi_3_exp3  &kp PLUS     &kp MINUS
 &kp LALT   &kp F5  &kp F6   &kp F7   &kp F8   &none             &kp LESS_THAN     &kp KP_N4      &kp KP_N5      &kp KP_N6      &kp ASTRK    &kp FSLH
 &kp LCTRL  &kp F9  &kp F10  &kp F11  &kp F12  &none             &kp GREATER_THAN  &kp KP_N7      &kp KP_N8      &kp KP_N9      &kp PERCENT  &none
-                            &none    &none    &release_tog 9    &kp LSHFT         &kp KP_EQUAL   &none
+                            &none    &mo 10   &release_tog 9    &kp LSHFT         &kp KP_EQUAL   &kp SPACE
             >;
         };
 
         Edition {
             bindings = <
-&kp TAB        &kp K_UNDO  &prev_word  &kp UP      &next_word     &kp K_REDO    &none  &none            &none       &Del_line    &perma_del  &none
-&kp C_AC_SAVE  &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT      &kp END       &none  &kp BSPC         &bspc_word  &kp DEL      &del_word   &none
-&none          &page_home  &kp PG_UP   &selall     &kp PAGE_DOWN  &page_end     &none  &kp K_CUT        &kp K_COPY  &kp K_PASTE  &kp INS     &none
-                                       &kp C_MENU  &kp LCTRL      &kp LSHFT     &none  &release_tog 10  &none
+&kp TAB        &kp K_UNDO  &prev_word  &kp UP        &next_word     &kp K_REDO    &none  &none            &none       &Del_line    &perma_del  &none
+&kp C_AC_SAVE  &kp HOME    &kp LEFT    &kp DOWN      &kp RIGHT      &kp END       &none  &kp BSPC         &bspc_word  &kp DEL      &del_word   &none
+&none          &page_home  &kp PG_UP   &selall       &kp PAGE_DOWN  &page_end     &none  &kp K_CUT        &kp K_COPY  &kp K_PASTE  &kp INS     &none
+                                       &kp LEFT_ALT  &kp LCTRL      &kp LSHFT     &none  &release_tog 10  &none
             >;
         };
 
