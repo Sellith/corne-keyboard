@@ -802,7 +802,7 @@
             bindings = <&kp G>, <&tog_purple 12>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_LALT)>;
+            mods = <(MOD_LSFT|MOD_LALT|MOD_LCTL)>;
         };
 
         kc_cc: kc_cc {
