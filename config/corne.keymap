@@ -784,7 +784,7 @@
 
             #binding-cells = <2>;
             hold-trigger-key-positions = <39 40 41 38 37>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <50>;
         };
 
         motog: motog {
@@ -793,7 +793,7 @@
             bindings = <&mo>, <&tog>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <52>;
             hold-trigger-key-positions = <38>;
         };
     };
