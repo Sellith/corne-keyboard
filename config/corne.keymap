@@ -106,7 +106,7 @@
 
             #binding-cells = <2>;
             hold-trigger-key-positions = <39 40 41>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
         };
 
         cyanlayer: cyanlayer {
@@ -116,17 +116,7 @@
 
             #binding-cells = <2>;
             hold-trigger-key-positions = <39 40 41>;
-            tapping-term-ms = <200>;
-        };
-
-        yellowlayer: yellowlayer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "YELLOWLAYER";
-            bindings = <&moyellow>, <&tog_yellow>;
-
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <39 40 41>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
         };
 
         c_cedille_: c_cedille_ {
