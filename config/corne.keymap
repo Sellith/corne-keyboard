@@ -99,16 +99,6 @@
             tapping-term-ms = <200>;
         };
 
-        greenlayer: greenlayer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "GREENLAYER";
-            bindings = <&mogreen>, <&kp>;
-
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <39 40 41>;
-            tapping-term-ms = <100>;
-        };
-
         orangelayer: orangelayer {
             compatible = "zmk,behavior-hold-tap";
             label = "ORANGELAYER";
