@@ -3329,7 +3329,7 @@
         lin_Symbols {
             bindings = <
 &none  &kp INT_YEN  &lpound       &leuro        &kp DOLLAR  &lcurrency    &lbecarre  &lbemol   &kp HASH      &ldegre       &none      &lacute
-&none  &lmulti      &ldiv         &lsquareroot  &lcarret    &lpuce        &kp TILDE  &kp AMPS  &dubamps      &kp PIPE      &dubpipes  &lgrave
+&none  &lmulti      &ldiv         &lsquareroot  &kp CARET   &lpuce        &kp TILDE  &kp AMPS  &dubamps      &kp PIPE      &dubpipes  &lgrave
 &none  &lcopyright  &lregistered  &ltm          &lnvpara    &lsection     &lmedian   &kp AT    &lfropnquote  &lfrclsquote  &none      &ldiaeresis
                                   &none         &none       &none         &none      &none     &none
             >;
@@ -3374,7 +3374,7 @@
         win_Symbols {
             bindings = <
 &none  &kp INT_YEN  &pound     &euro       &kp DOLLAR  &currency      &becarre   &bemol    &kp HASH            &degre               &none      &acute_accent
-&none  &multi       &division  &racine     &carret     &puce          &kp TILDE  &kp AMPS  &dubamps            &kp PIPE             &dubpipes  &grave_accent
+&none  &multi       &division  &racine     &kp CARET   &puce          &kp TILDE  &kp AMPS  &dubamps            &kp PIPE             &dubpipes  &grave_accent
 &none  &copyright   &label     &trademark  &nouv_para  &paragraphe    &median    &kp AT    &french_quote_open  &french_quote_close  &none      &Diaeresis
                                &none       &none       &none          &none      &none     &none
             >;
