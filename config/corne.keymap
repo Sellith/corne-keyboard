@@ -758,10 +758,10 @@
             mods = <(MOD_LSFT)>;
         };
 
-        kc_cc: kc_cc {
+        layerwg: layerwg {
             compatible = "zmk,behavior-mod-morph";
-            label = "KC_CC";
-            bindings = <&layer_kc>, <&layer_cc>;
+            label = "LAYERWG";
+            bindings = <&to 5>, <&tog 12>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -785,6 +785,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <130>;
             hold-trigger-key-positions = <38>;
+        };
+
+        layerlg: layerlg {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LAYERLG";
+            bindings = <&to 0>, <&tog 12>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
         };
     };
 
@@ -3251,25 +3260,6 @@
         tog_green {
             bindings = <&tog_green 11>;
             key-positions = <25 39 35>;
-            timeout-ms = <200>;
-        };
-
-        change_to_win {
-            bindings = <&to 5>;
-            key-positions = <27 2 35>;
-            timeout-ms = <200>;
-        };
-
-        change_to_lin {
-            bindings = <&to 0>;
-            key-positions = <27 35 8>;
-            timeout-ms = <200>;
-        };
-
-        to_gaming {
-            bindings = <&tog 12>;
-            key-positions = <35 17 27>;
-            timeout-ms = <200>;
         };
     };
 };
@@ -3286,7 +3276,7 @@
 &kp ESC   &kp Q  &kp W             &kp F                 &kp P                &kp SEMICOLON    &kp SQT          &kp J           &kp L             &kp U  &kp Y  &lrpar
 &kp TAB   &kp A  &homerow LCTRL R  &homerow LEFT_GUI S   &homerow LEFT_ALT T  &kp G            &kp M            &kp N           &kp E             &kp I  &kp O  &lrbkt
 &exction  &kp Z  &kp X             &kp C                 &kp V                &kp MINUS        &slbsl           &kp B           &kp D             &kp K  &kp H  &lrbrc
-                                   &htkp LSHFT CAPSLOCK  &kc_cc               &motog 4 4       &mo_kp 10 ENTER  &mo_kp 3 SPACE  &orangelayer 1 0
+                                   &htkp LSHFT CAPSLOCK  &layerwg             &motog 4 4       &mo_kp 10 ENTER  &mo_kp 3 SPACE  &orangelayer 1 0
             >;
         };
 
@@ -3331,7 +3321,7 @@
 &kp ESC   &kp Q  &kp W             &kp F                 &kp P                &kp SEMICOLON    &kp SQT          &kp J               &kp L             &kp U  &kp Y  &lrpar
 &kp TAB   &kp A  &homerow LCTRL R  &homerow LEFT_GUI S   &homerow LEFT_ALT T  &kp G            &kp M            &kp N               &kp E             &kp I  &kp O  &lrbkt
 &exction  &kp Z  &kp X             &kp C                 &kp V                &kp MINUS        &slbsl           &kp B               &kp D             &kp K  &kp H  &lrbrc
-                                   &htkp LSHFT CAPSLOCK  &kc_cc               &motog 9 9       &mo_kp 10 ENTER  &cyanlayer 8 SPACE  &orangelayer 6 0
+                                   &htkp LSHFT CAPSLOCK  &layerlg             &motog 9 9       &mo_kp 10 ENTER  &cyanlayer 8 SPACE  &orangelayer 6 0
             >;
         };
 
