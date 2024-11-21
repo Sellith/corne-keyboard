@@ -3318,10 +3318,10 @@
 
         win_base {
             bindings = <
-&kp ESC   &kp Q  &kp W             &kp F                 &kp P                &kp SEMICOLON    &kp SQT          &kp J               &kp L             &kp U  &kp Y  &lrpar
-&kp TAB   &kp A  &homerow LCTRL R  &homerow LEFT_GUI S   &homerow LEFT_ALT T  &kp G            &kp M            &kp N               &kp E             &kp I  &kp O  &lrbkt
-&exction  &kp Z  &kp X             &kp C                 &kp V                &kp MINUS        &slbsl           &kp B               &kp D             &kp K  &kp H  &lrbrc
-                                   &htkp LSHFT CAPSLOCK  &layerlg             &motog 9 9       &mo_kp 10 ENTER  &cyanlayer 8 SPACE  &orangelayer 6 0
+&kp ESC   &kp Q  &kp W             &kp F                 &kp P                &kp SEMICOLON    &kp SQT          &kp J           &kp L             &kp U  &kp Y  &lrpar
+&kp TAB   &kp A  &homerow LCTRL R  &homerow LEFT_GUI S   &homerow LEFT_ALT T  &kp G            &kp M            &kp N           &kp E             &kp I  &kp O  &lrbkt
+&exction  &kp Z  &kp X             &kp C                 &kp V                &kp MINUS        &slbsl           &kp B           &kp D             &kp K  &kp H  &lrbrc
+                                   &htkp LSHFT CAPSLOCK  &layerlg             &motog 9 9       &mo_kp 10 ENTER  &mo_kp 8 SPACE  &orangelayer 6 0
             >;
         };
 
