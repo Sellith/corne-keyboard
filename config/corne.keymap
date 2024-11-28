@@ -3392,10 +3392,10 @@
 
         navi {
             bindings = <
-&none  &none      &none      &none     &none     &none    &none     &none     &kp UP    &none      &none    &none
-&none  &kp LSHFT  &kp LCTRL  &kp LGUI  &kp LALT  &none    &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT  &kp END  &none
-&none  &none      &none      &none     &none     &none    &none     &none     &none     &none      &none    &none
-                             &none     &none     &none    &none     &none     &none
+&none  &none      &none      &none     &none     &none    &none     &kp PG_UP  &kp UP    &kp PAGE_DOWN  &none    &none
+&none  &kp LSHFT  &kp LCTRL  &kp LGUI  &kp LALT  &none    &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT      &kp END  &none
+&none  &none      &none      &none     &none     &none    &none     &none      &none     &none          &none    &none
+                             &none     &none     &none    &none     &none      &none
             >;
         };
 
