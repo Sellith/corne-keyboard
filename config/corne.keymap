@@ -644,7 +644,7 @@
         Linux_Combo_0exp0: Linux_Combo_0exp0 {
             compatible = "zmk,behavior-mod-morph";
             label = "LINUX_COMBO_0EXP0";
-            bindings = <&kp N0>, <&lexp0>;
+            bindings = <&kp KP_N0>, <&lexp0>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -653,7 +653,7 @@
         Linux_Combo_1exp1: Linux_Combo_1exp1 {
             compatible = "zmk,behavior-mod-morph";
             label = "LINUX_COMBO_1EXP1";
-            bindings = <&kp NUMBER_1>, <&lexp1>;
+            bindings = <&kp KP_NUMBER_1>, <&lexp1>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -662,7 +662,7 @@
         Linux_Combo_2exp2: Linux_Combo_2exp2 {
             compatible = "zmk,behavior-mod-morph";
             label = "LINUX_COMBO_2EXP2";
-            bindings = <&kp NUMBER_2>, <&lexp2>;
+            bindings = <&kp KP_NUMBER_2>, <&lexp2>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -671,7 +671,7 @@
         Linux_Combo_3exp3: Linux_Combo_3exp3 {
             compatible = "zmk,behavior-mod-morph";
             label = "LINUX_COMBO_3EXP3";
-            bindings = <&kp NUMBER_3>, <&lexp3>;
+            bindings = <&kp KP_NUMBER_3>, <&lexp3>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -680,7 +680,7 @@
         Linux_Combo_4exp4: Linux_Combo_4exp4 {
             compatible = "zmk,behavior-mod-morph";
             label = "LINUX_COMBO_4EXP4";
-            bindings = <&kp NUMBER_4>, <&lexp4>;
+            bindings = <&kp KP_NUMBER_4>, <&lexp4>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -689,7 +689,7 @@
         Linux_Combo_5exp5: Linux_Combo_5exp5 {
             compatible = "zmk,behavior-mod-morph";
             label = "LINUX_COMBO_5EXP5";
-            bindings = <&kp N5>, <&lexp5>;
+            bindings = <&kp KP_NUMBER_5>, <&lexp5>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -698,7 +698,7 @@
         Linux_Combo_6exp6: Linux_Combo_6exp6 {
             compatible = "zmk,behavior-mod-morph";
             label = "LINUX_COMBO_6EXP6";
-            bindings = <&kp NUMBER_6>, <&lexp6>;
+            bindings = <&kp KP_NUMBER_6>, <&lexp6>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -761,7 +761,7 @@
         layerwg: layerwg {
             compatible = "zmk,behavior-mod-morph";
             label = "LAYERWG";
-            bindings = <&to 5>, <&tog 12>;
+            bindings = <&to 5>, <&tog 13>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -790,10 +790,30 @@
         layerlg: layerlg {
             compatible = "zmk,behavior-mod-morph";
             label = "LAYERLG";
-            bindings = <&to 0>, <&tog 12>;
+            bindings = <&to 0>, <&tog 13>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
+        };
+
+        wgnavi: wgnavi {
+            compatible = "zmk,behavior-hold-tap";
+            label = "WGNAVI";
+            bindings = <&mo>, <&layerwg>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <39 40 41 38 37>;
+            tapping-term-ms = <130>;
+        };
+
+        lgnavi: lgnavi {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LGNAVI";
+            bindings = <&mo>, <&layerlg>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <39 40 41 38 37>;
+            tapping-term-ms = <130>;
         };
     };
 
@@ -3147,12 +3167,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 17>,
+                <&mo 0>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(218,87,76)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 17>,
+                <&mo 0>,
                 <&macro_tap>,
                 <&rgb_ug RGB_EFR>;
 
@@ -3164,12 +3184,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 15>,
+                <&mo 16>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(132,87,76)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 15>,
+                <&mo 16>,
                 <&macro_tap>,
                 <&rgb_ug RGB_EFR>;
 
@@ -3181,12 +3201,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 14>,
+                <&mo 15>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(171,87,76)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 14>,
+                <&mo 15>,
                 <&macro_tap>,
                 <&rgb_ug RGB_EFR>;
 
@@ -3198,12 +3218,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 16>,
+                <&mo 17>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(65,87,76)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 16>,
+                <&mo 17>,
                 <&macro_tap>,
                 <&rgb_ug RGB_EFR>;
 
@@ -3227,9 +3247,9 @@
         compatible = "zmk,combos";
 
         gaming_release {
-            bindings = <&release_tog 12>;
+            bindings = <&release_tog 13>;
             key-positions = <38 12 4>;
-            layers = <12>;
+            layers = <13>;
             timeout-ms = <200>;
         };
 
@@ -3258,7 +3278,7 @@
         };
 
         tog_green {
-            bindings = <&tog_green 11>;
+            bindings = <&tog_green 12>;
             key-positions = <25 39 35>;
         };
     };
@@ -3276,7 +3296,7 @@
 &kp ESC   &kp Q  &kp W             &kp F                 &kp P                &kp SEMICOLON    &kp SQT          &kp J           &kp L             &kp U  &kp Y  &lrpar
 &kp TAB   &kp A  &homerow LCTRL R  &homerow LEFT_GUI S   &homerow LEFT_ALT T  &kp G            &kp M            &kp N           &kp E             &kp I  &kp O  &lrbkt
 &exction  &kp Z  &kp X             &kp C                 &kp V                &kp MINUS        &slbsl           &kp B           &kp D             &kp K  &kp H  &lrbrc
-                                   &htkp LSHFT CAPSLOCK  &layerwg             &motog 4 4       &mo_kp 10 ENTER  &mo_kp 3 SPACE  &orangelayer 1 0
+                                   &htkp LSHFT CAPSLOCK  &wgnavi 11 0         &motog 4 4       &mo_kp 10 ENTER  &mo_kp 3 SPACE  &orangelayer 1 0
             >;
         };
 
@@ -3311,7 +3331,7 @@
             bindings = <
 &kp LGUI   &kp F1  &kp F2   &kp F3   &kp F4   &none             &Linux_Combo_0exp0       &Linux_Combo_1exp1  &Linux_Combo_2exp2  &Linux_Combo_3exp3  &kp PLUS     &kp MINUS
 &kp LALT   &kp F5  &kp F6   &kp F7   &kp F8   &none             &Linux_Combo_lesslesseq  &Linux_Combo_4exp4  &Linux_Combo_5exp5  &Linux_Combo_6exp6  &kp ASTRK    &kp FSLH
-&kp LCTRL  &kp F9  &kp F10  &kp F11  &kp F12  &none             &Linux_Combo_grgrequal   &Linux_Combo_7exp7  &Linux_Combo_8exp8  &Linux_Combo_9exp9  &kp PERCENT  &none
+&kp LCTRL  &kp F9  &kp F10  &kp F11  &kp F12  &none             &Linux_Combo_grgrequal   &Linux_Combo_7exp7  &Linux_Combo_8exp8  &Linux_Combo_9exp9  &kp PERCENT  &mo 10
                             &none    &mo 10   &release_tog 4    &kp LSHFT                &Linux_Combo_eine   &kp SPACE
             >;
         };
@@ -3321,7 +3341,7 @@
 &kp ESC   &kp Q  &kp W             &kp F                 &kp P                &kp SEMICOLON    &kp SQT          &kp J           &kp L             &kp U  &kp Y  &lrpar
 &kp TAB   &kp A  &homerow LCTRL R  &homerow LEFT_GUI S   &homerow LEFT_ALT T  &kp G            &kp M            &kp N           &kp E             &kp I  &kp O  &lrbkt
 &exction  &kp Z  &kp X             &kp C                 &kp V                &kp MINUS        &slbsl           &kp B           &kp D             &kp K  &kp H  &lrbrc
-                                   &htkp LSHFT CAPSLOCK  &layerlg             &motog 9 9       &mo_kp 10 ENTER  &mo_kp 8 SPACE  &orangelayer 6 0
+                                   &htkp LSHFT CAPSLOCK  &lgnavi 11 0         &motog 9 9       &mo_kp 10 ENTER  &mo_kp 8 SPACE  &orangelayer 6 0
             >;
         };
 
@@ -3356,17 +3376,26 @@
             bindings = <
 &kp LGUI   &kp F1  &kp F2   &kp F3   &kp F4   &none             &kp KP_NUMBER_0   &Combi_1_exp1  &Combi_2_exp2  &combi_3_exp3  &kp PLUS     &kp MINUS
 &kp LALT   &kp F5  &kp F6   &kp F7   &kp F8   &none             &kp LESS_THAN     &kp KP_N4      &kp KP_N5      &kp KP_N6      &kp ASTRK    &kp FSLH
-&kp LCTRL  &kp F9  &kp F10  &kp F11  &kp F12  &none             &kp GREATER_THAN  &kp KP_N7      &kp KP_N8      &kp KP_N9      &kp PERCENT  &none
+&kp LCTRL  &kp F9  &kp F10  &kp F11  &kp F12  &none             &kp GREATER_THAN  &kp KP_N7      &kp KP_N8      &kp KP_N9      &kp PERCENT  &mo 10
                             &none    &mo 10   &release_tog 9    &kp LSHFT         &kp KP_EQUAL   &kp SPACE
             >;
         };
 
         Edition {
             bindings = <
-&kp TAB        &kp K_UNDO  &prev_word  &kp UP        &next_word     &kp K_REDO    &none  &none            &none       &Del_line    &perma_del  &none
+&kp TAB        &kp K_UNDO  &prev_word  &kp UP        &next_word     &kp K_REDO    &none  &none            &none       &Del_line    &perma_del  &tog 12
 &kp C_AC_SAVE  &kp HOME    &kp LEFT    &kp DOWN      &kp RIGHT      &kp END       &none  &kp BSPC         &bspc_word  &kp DEL      &del_word   &none
 &none          &page_home  &kp PG_UP   &selall       &kp PAGE_DOWN  &page_end     &none  &kp K_CUT        &kp K_COPY  &kp K_PASTE  &kp INS     &none
                                        &kp LEFT_ALT  &kp LCTRL      &kp LSHFT     &none  &release_tog 10  &none
+            >;
+        };
+
+        navi {
+            bindings = <
+&none  &none      &none      &none     &none     &none    &none     &none     &kp UP    &none      &none    &none
+&none  &kp LSHFT  &kp LCTRL  &kp LGUI  &kp LALT  &none    &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT  &kp END  &none
+&none  &none      &none      &none     &none     &none    &none     &none     &none     &none      &none    &none
+                             &none     &none     &none    &none     &none     &none
             >;
         };
 
@@ -3375,7 +3404,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans   &trans          &kp UP_ARROW    &trans           &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp E    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp A   &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans   &kp PAGE_UP     &trans          &kp PAGE_DOWN    &trans  &trans
-                        &trans  &trans  &trans    &tog 11  &kp F11         &trans
+                        &trans  &trans  &trans    &tog 12  &kp F11         &trans
             >;
         };
 
@@ -3384,7 +3413,7 @@
 &kp ESC  &kp T         &kp Q  &kp W   &kp E      &kp R        &none  &none  &none  &none  &none  &none
 &kp TAB  &htkp LALT I  &kp A  &kp S   &kp D      &kp F        &none  &none  &none  &none  &none  &none
 &kp O    &kp LSHFT     &kp Z  &kp X   &kp C      &kp V        &none  &none  &none  &none  &none  &none
-                              &mo 13  &kp LCTRL  &kp SPACE    &none  &none  &none
+                              &mo 14  &kp LCTRL  &kp SPACE    &none  &none  &none
             >;
         };
 
@@ -3421,15 +3450,6 @@
 &none  &none  &none  &none  &none  &none    &none  &winleft            &winmin     &winright           &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none               &allwinmin  &none               &none  &none
                      &none  &none  &none    &none  &none               &none
-            >;
-        };
-
-        Computer_Control {
-            bindings = <
-&none  &none  &none  &none  &none  &none    &none  &none        &none            &none                  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &kp C_POWER  &kp C_AL_LOCK    &kp C_SLEEP            &none  &none
-&none  &none  &none  &none  &none  &none    &none  &kp C_RESET  &kp C_AL_LOGOFF  &kp C_AL_SCREEN_SAVER  &none  &none
-                     &none  &none  &none    &none  &none        &none
             >;
         };
 
