@@ -777,16 +777,6 @@
             tapping-term-ms = <130>;
         };
 
-        motog: motog {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MOTOG";
-            bindings = <&mo>, <&tog>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <130>;
-            hold-trigger-key-positions = <38>;
-        };
-
         layerlg: layerlg {
             compatible = "zmk,behavior-mod-morph";
             label = "LAYERLG";
@@ -814,6 +804,20 @@
             #binding-cells = <2>;
             hold-trigger-key-positions = <39 40 41 38 37>;
             tapping-term-ms = <130>;
+        };
+
+        linnumdance: linnumdance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LINNUMDANCE";
+            #binding-cells = <0>;
+            bindings = <&mo 4>, <&tog 4>;
+        };
+
+        winnumdance: winnumdance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "WINNUMDANCE";
+            #binding-cells = <0>;
+            bindings = <&mo 9>, <&tog 9>;
         };
     };
 
@@ -3296,7 +3300,7 @@
 &kp ESC   &kp Q  &kp W             &kp F                 &kp P                &kp SEMICOLON    &kp SQT          &kp J           &kp L             &kp U  &kp Y  &lrpar
 &kp TAB   &kp A  &homerow LCTRL R  &homerow LEFT_GUI S   &homerow LEFT_ALT T  &kp G            &kp M            &kp N           &kp E             &kp I  &kp O  &lrbkt
 &exction  &kp Z  &kp X             &kp C                 &kp V                &kp MINUS        &slbsl           &kp B           &kp D             &kp K  &kp H  &lrbrc
-                                   &htkp LSHFT CAPSLOCK  &wgnavi 11 0         &motog 4 4       &mo_kp 10 ENTER  &mo_kp 3 SPACE  &orangelayer 1 0
+                                   &htkp LSHFT CAPSLOCK  &wgnavi 11 0         &linnumdance     &mo_kp 10 ENTER  &mo_kp 3 SPACE  &orangelayer 1 0
             >;
         };
 
@@ -3341,7 +3345,7 @@
 &kp ESC   &kp Q  &kp W             &kp F                 &kp P                &kp SEMICOLON    &kp SQT          &kp J           &kp L             &kp U  &kp Y  &lrpar
 &kp TAB   &kp A  &homerow LCTRL R  &homerow LEFT_GUI S   &homerow LEFT_ALT T  &kp G            &kp M            &kp N           &kp E             &kp I  &kp O  &lrbkt
 &exction  &kp Z  &kp X             &kp C                 &kp V                &kp MINUS        &slbsl           &kp B           &kp D             &kp K  &kp H  &lrbrc
-                                   &htkp LSHFT CAPSLOCK  &lgnavi 11 0         &motog 9 9       &mo_kp 10 ENTER  &mo_kp 8 SPACE  &orangelayer 6 0
+                                   &htkp LSHFT CAPSLOCK  &lgnavi 11 0         &winnumdance     &mo_kp 10 ENTER  &mo_kp 8 SPACE  &orangelayer 6 0
             >;
         };
 
