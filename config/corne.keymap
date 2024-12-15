@@ -3318,7 +3318,7 @@
 &none  &none  &none  &none  &none  &none    &lalpham  &lbetam   &lgammam   &ldelta   &lepsilonm  &none
 &none  &none  &none  &none  &none  &none    &lzetam   &lthetam  &llambdam  &lmum     &lpim       &none
 &none  &none  &none  &none  &none  &none    &lsigma   &lphim    &lpsim     &lomegam  &lomega     &none
-                     &none  &none  &none    &none     &none     &none
+                     &none  &none  &none    &trans    &none     &none
             >;
         };
 
