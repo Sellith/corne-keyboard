@@ -3465,5 +3465,14 @@
                                       &none          &none          &none            &none  &none            &none
             >;
         };
+
+        kitty {
+            bindings = <
+&trans  &kp LC(LS(T))      &kp LC(LS(Q))  &kp LC(LS(LEFT))          &kp LC(LS(RIGHT))          &kp LC(LS(DEL))    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(LS(ENTER))  &kp LC(LS(W))  &kp LC(LS(LEFT_BRACKET))  &kp LC(LS(RIGHT_BRACKET))  &trans             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(LS(F))      &kp LC(LS(B))  &trans                    &trans                     &trans             &trans  &trans  &trans  &trans  &trans  &trans
+                                          &trans                    &trans                     &trans             &trans  &trans  &trans
+            >;
+        };
     };
 };
