@@ -988,7 +988,7 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_NUMBER_0>,
+                <&kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_NUMBER_1>,
                 <&macro_release>,
                 <&kp LALT>;
 
@@ -1296,7 +1296,7 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_NUMBER_9>,
+                <&kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_N2>,
                 <&macro_release>,
                 <&kp LALT>;
 
@@ -2326,7 +2326,7 @@
         Del_line: Del_line {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &kp LS(DOWN) &kp BSPC>;
+            bindings = <&kp HOME &kp LS(END) &kp BSPC>;
             label = "DEL_LINE";
         };
 
