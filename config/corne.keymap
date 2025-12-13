@@ -3285,11 +3285,6 @@
             bindings = <&tog_green 12>;
             key-positions = <25 39 35>;
         };
-
-        to_gaming {
-            bindings = <&tog 13>;
-            key-positions = <25 17 38>;
-        };
     };
 };
 
